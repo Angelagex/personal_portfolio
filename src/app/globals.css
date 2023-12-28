@@ -2,26 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+@layer base {
+	body {
+		@apply h-full antialiased dark:bg-neutral-900 dark:text-neutral-50 text-xl;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer components {
+	.bento_cards {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		box-sizing: border-box;
+	}
+
+	.title {
+		@apply font-raleway text-white text-[50px] not-italic font-black leading-[normal];
+	}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer cards {
+	.purple_mix_card {
+		border-radius: 1.25rem;
+		border: 1px solid #FFF;
+		background: linear-gradient(229deg, rgba(181, 136, 255, 0.20) 12.25%, rgba(136, 255, 234, 0.05) 92.63%, rgba(136, 255, 234, 0.05) 92.63%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.blue_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(154, 219, 255, 0.20) -1.12%, rgba(69, 195, 255, 0.05) 89.76%, rgba(69, 195, 255, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(202, 232, 248, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.yellowV1_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(255, 255, 255, 0.20) -1.11%, rgba(214, 206, 11, 0.15) 22.78%, rgba(255, 255, 255, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.yellowV2_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(255, 216, 199, 0.20) -1.12%, rgba(252, 234, 76, 0.16) 40.29%, rgba(255, 147, 69, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.white_card {
+		border-radius: 1.25rem;
+		border: 1px solid #FFF;
+		background: linear-gradient(277deg, rgba(255, 255, 255, 0.20) 5.08%, rgba(255, 255, 255, 0.05) 90.62%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.purple_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(254, 219, 255, 0.20) -1.11%, rgba(147, 10, 150, 0.10) 31.77%, rgba(69, 195, 255, 0.05) 89.76%, rgba(251, 58, 255, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.green_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(111, 255, 255, 0.20) 11.65%, rgba(27, 255, 23, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(152, 152, 152, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.black_card {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(12, 28, 29, 0.20) -1.12%, rgba(0, 0, 0, 0.20) -1.11%, rgba(69, 195, 255, 0.05) 89.76%, rgba(0, 0, 0, 0.05) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
 }
