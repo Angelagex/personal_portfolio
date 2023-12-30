@@ -7,9 +7,9 @@ export default function GitCard() {
     return (
         <div className="white_card rounded-3xl col-span-2 overflow-hidden">
 
-            <div className="relative w-full h-full sm:p-12 p-8 md:p-8">
+            <div className="relative w-full h-full p-8">
                 <div className="w-full h-full flex flex-col justify-between">
-                    <h2 className="font-bold text-md md:text-l lg:text-3xl z-40">
+                    <h2 className="font-bold text-md md:text-l lg:text-3xl">
                         Github
                     </h2>
                 </div>
@@ -24,10 +24,8 @@ export default function GitCard() {
                     loading="lazy"
                 />
             </div>
-            <div className="relative w-full h-full sm:p-12 p-8 md:p-12"></div>
             <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6" />
-            <Image src={gitIconRounded} alt="openButton" className="absolute bottom-4 right-4 w-10" />
-
+            <Image src={gitIconRounded} alt="gitIcon" className="absolute bottom-4 right-4 w-10" />
         </div>
     );
 }

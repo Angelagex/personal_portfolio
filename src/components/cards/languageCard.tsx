@@ -7,6 +7,5 @@ export default function LanguageCard({language}: {language: string}) {
             <h3 className="font-rampart-one text-[4.375rem]  mt-6 mb-8 text-center">{language}</h3>
             <LanguageSelection />
         </div>
-
     );
 }
