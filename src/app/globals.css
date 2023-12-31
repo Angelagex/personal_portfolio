@@ -83,7 +83,7 @@
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
-	
+
 	.offline_card {
 		border-radius: 1.25rem;
 		background: linear-gradient(49deg, rgba(255, 255, 255, 0.20) -1.12%, rgba(255, 255, 255, 0.05) 89.76%);
@@ -111,4 +111,95 @@
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
+}
+
+@layer player {
+	.bar {
+		width: 12px;
+		border-radius: 10px;
+		background: none;
+		animation: movement 3s infinite alternate;
+	}
+
+	@keyframes movement {
+
+		0%,
+		100% {
+			height: 2px;
+		}
+
+		50% {
+			height: 24px;
+		}
+	}
+
+	.bar:nth-child(1) {
+		background: #d6d4d1;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 2s;
+	}
+
+	.bar:nth-child(2) {
+		background: #dddcda;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 1.6s;
+	}
+
+	.bar:nth-child(3) {
+		background: #ffffffb0;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 1.2s;
+	}
+
+	.bar:nth-child(4) {
+		background: #bdbcbb;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: .8s;
+	}
+
+	.bar:nth-child(5) {
+		background: #fdf5ecb0;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: .4s;
+
+	}
+
+	.bar:nth-child(6) {
+		background: #fdf5ecda;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: .8s;
+	}
+
+	.bar:nth-child(7) {
+		background: #fdf5ec91;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 1.2s;
+	}
+
+	.bar:nth-child(8) {
+		background: #fdf5ecd5;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 1.6s;
+	}
+
+	.bar:nth-child(9) {
+		background: #fdf5ec9d;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 2s;
+	}
+
+	.bar:nth-child(10) {
+		background: #fdf5ecbd;
+		box-shadow: rgb(75, 75, 75) 2px 4px;
+		animation-delay: 1.6s;
+	}
+
+	.pause {
+		animation-play-state: paused;
+	}
+
+	.play {
+		animation-play-state: running;
+	}
+
 }

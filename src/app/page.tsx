@@ -3,11 +3,13 @@ import DiscordCard from '@/components/cards/discordCard';
 import EmailCard from '@/components/cards/emailCard';
 import ExperienceCard from '@/components/cards/experienceCard';
 import GitCard from '@/components/cards/gitCard';
+import HdvCard from '@/components/cards/hdvCard';
 import IconsCard from '@/components/cards/iconsCard';
 import LanguageCard from '@/components/cards/languageCard'
 import LinkedInCard from '@/components/cards/linkedInCard';
 import ProfileCard from '@/components/cards/profileCard'
 import ProjectsCard from '@/components/cards/projectsCard';
+import SpotifyCard from '@/components/cards/spotifyCard';
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 interface SearchParams {
   searchParams: {
@@ -28,9 +30,9 @@ export default function Home({ searchParams }: SearchParams) {
       <GitCard />
       <ExperienceCard />
       <IconsCard />
+      <SpotifyCard />
       <DiscordCard />
-      <div className="col-span-2 bento_cards"></div>
-      <div className="bento_cards"></div>
+      <HdvCard />
       <div className="col-span-2 bento_cards"></div>
       <div className="bento_cards"></div>
       <div className="bento_cards"></div>

@@ -9,7 +9,7 @@ export default function ProjectsCard() {
                 <h2 className="font-bold text-md md:text-l lg:text-3xl">
                     Proyectos y Experimentos
                 </h2>
-                <p className="text-base lg:text-lg md:w-4/5 lg:w-5/6 lg:mt-4">
+                <p className="text-sm lg:text-base md:w-4/5 lg:w-5/6 lg:mt-4">
                     Adéntrate en mi biblioteca digital, donde aguarda una colección de mis proyectos y experimentos. ¡Explora y déjate inspirar!
                 </p>
             </div>
