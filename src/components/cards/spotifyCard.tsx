@@ -8,8 +8,6 @@ import AudioPlayer from "../ui/audioPlayer";
 
 export default async function SpotifyCard() {
   const data = await getSpotifyInfo()
-  console.log(data);
-
   return (
     <div className="white_card rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20">
 

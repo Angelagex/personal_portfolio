@@ -203,3 +203,79 @@
 	}
 
 }
+
+@layer weather {
+	.sun {
+		width: 80px;
+		height: 80px;
+		background: #fcdd2e;
+		border-radius: 50%;
+		animation: shine 16s ease-in-out infinite;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 100;
+		box-shadow: 0 0 20px #ffdd50
+	}
+
+	@keyframes shine {
+		50% {
+			box-shadow: 2px 2px 20px #ffde5c,
+				2px 2px 80px #ffdd50,
+				2px 2px 350px rgb(255, 252, 80);
+		}
+	}
+}
+
+@layer weather {
+	.moon {
+		width: 80px;
+		height: 80px;
+		background: #bbb084;
+		border-radius: 50%;
+		animation: shine 16s ease-in-out infinite;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 100;
+		box-shadow: 0 0 20px #c4e0ff
+	}
+
+	@keyframes shine {
+		50% {
+			box-shadow: 0 0 20px #e7d99f,
+				0 0 80px rgb(245, 231, 178)
+		}
+	}
+}
+
+@layer mlbb {
+	.wrapper {
+		display: grid;
+		place-content: center;
+		background-color: var(--background-color);
+		font-family: "Oswald", sans-serif;
+		font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+		font-weight: 700;
+		text-transform: uppercase;
+		color: var(--text-color);
+	  }
+	  
+	  .wrapper > div {
+		transform: rotate(-20deg);
+		grid-area: 1/1/-1/-1;
+	  }
+	  .top {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+	  }
+	  .bottom {
+		clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+		color: #d8dbdd;
+		background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+		background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		transform: translateX(-0.02em);
+	  }
+	  
+}

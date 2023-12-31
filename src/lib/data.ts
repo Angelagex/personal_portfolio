@@ -21,11 +21,17 @@ export async function getSpotifyInfo() {
     spotifyApi.setRefreshToken(refresh_token);
     const { body } = await spotifyApi.refreshAccessToken();
     spotifyApi.setAccessToken(body.access_token);
-    console.log(body);
 
     const recentTracks = await spotifyApi.getMyRecentlyPlayedTracks({
         limit: 1,
     });
 
     return recentTracks.body.items[0].track
+}
+
+export async function getWeatherInfo() {
+    
+    const fetchData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Bogota,CO&units=metric&&lang=es&appid=${process.env.WEATHER_API_KEY}`)    
+    return fetchData.json()
+    
 }

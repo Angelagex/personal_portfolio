@@ -1,24 +1,24 @@
 'use client'
+
 import { useState } from "react";
 import { IoPlayCircle, IoPauseCircle } from "react-icons/io5";
 
 
 export default function AudioPlayer({url}: {url: string}) {
     const [animation, setAnimation] = useState("pause");
-    const [audio] = useState(new Audio(url));
-
-    audio.addEventListener("ended", () => {
+    const [audio] = useState<HTMLAudioElement | null>(typeof Audio !== 'undefined' ? new Audio(url) : null)
+    audio?.addEventListener("ended", () => {
         setAnimation("pause")
     })
 
     const handlePlay = () => {
         setAnimation("play")
-        audio.play()
+        audio?.play()
     }
 
     const handlePause = () => {
         setAnimation("pause")
-        audio.pause()
+        audio?.pause()
     }
     
     return (
