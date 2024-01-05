@@ -24,7 +24,7 @@ export default async function MlbbCard() {
                 </div>
             </section>
             <Image src={mythic} alt="beatrixImage" className="-z-10 absolute w-14 top-2 left-2 " />
-            <Image src={beatrix} alt="beatrixImage" className="-z-10 absolute w-[200px] bottom-0 -left-2 " />
+            <Image src={beatrix} alt="beatrixImage" className="-z-10 absolute w-[200px] bottom-0 -left-2 beatrix" />
             <Image src={mlbg3} className="fixed h-full top-0 left-0 object-center object-cover -z-[1000] rounded-3xl opacity-60" alt="" loading="lazy" />
         </div>
     );

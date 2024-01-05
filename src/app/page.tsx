@@ -12,17 +12,23 @@ import ProfileCard from '@/components/cards/profileCard'
 import ProjectsCard from '@/components/cards/projectsCard';
 import SpotifyCard from '@/components/cards/spotifyCard';
 import WeatherCard from '@/components/cards/weatherCard';
-import DayCard from '@/components/ui/dayCard';
-import NightCard from '@/components/ui/nightCard';
+import Pointer from '@/components/ui/pointer';
+import VantaBackground from '@/components/ui/vanta.component';
+
 interface SearchParams {
   searchParams: {
     lang: string;
+    theme: string;
   }
 }
 
 export default function Home({ searchParams }: SearchParams) {
   const language = searchParams.lang || "ES"
+  const theme = searchParams.theme || "dark"
+
   return <main>
+    <Pointer />
+    <VantaBackground key={theme} theme={theme}/>
     <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20">
       <ProfileCard />
       <LanguageCard language={language} />

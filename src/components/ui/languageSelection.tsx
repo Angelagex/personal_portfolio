@@ -22,7 +22,7 @@ export default function LanguageSelection() {
     return (
         <div className="flex w-20">
             {Object.entries(Languages).map(([key, value]) =>
-                <p className="font-raleway m-auto text-center cursor-pointer" key={key} onClick={() => handleLanguage(value)}>{value}</p>
+                <p className="font-raleway m-auto text-center" key={key} onClick={() => handleLanguage(value)}>{value}</p>
             )}
         </div>
     );

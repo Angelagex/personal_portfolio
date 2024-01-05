@@ -5,7 +5,7 @@ export default function ExperienceCard() {
                 <h3 className="font-rampart-one text-6xl mt-6 mb-4 text-center">+1<sup className="text-[2.575rem]">.5</sup></h3>
             </div>
             <div className="flex w-40 px-1">
-                <p className="font-raleway text-center cursor-pointer uppercase text-sm text-pretty">Años de Experiencia</p>
+                <p className="font-raleway text-center uppercase text-sm text-pretty">Años de Experiencia</p>
             </div>
         </div>
     );

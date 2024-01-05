@@ -6,7 +6,10 @@
 
 @layer base {
 	body {
-		@apply h-full antialiased dark:bg-neutral-900 dark:text-neutral-50 text-xl;
+		@apply h-full antialiased dark:bg-neutral-900 dark:text-neutral-50 text-xl cursor-none;
+	}
+	a {
+		cursor: none;
 	}
 }
 
@@ -259,16 +262,18 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		color: var(--text-color);
-	  }
-	  
-	  .wrapper > div {
+	}
+
+	.wrapper>div {
 		transform: rotate(-20deg);
 		grid-area: 1/1/-1/-1;
-	  }
-	  .top {
+	}
+
+	.top {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
-	  }
-	  .bottom {
+	}
+
+	.bottom {
 		clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
 		color: #d8dbdd;
 		background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
@@ -276,6 +281,63 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		transform: translateX(-0.02em);
-	  }
-	  
+	}
+
+	.beatrix {
+		animation: shine 3s infinite alternate;
+	}
+
+	@keyframes shine {
+		0% {
+			filter: drop-shadow( 2px -8px 2px #15a89cc0 );		
+		}
+		50% {
+			filter: drop-shadow( 2px -8px 2px #b66e1baf );		
+		}
+		100% {
+			filter: drop-shadow( 2px -8px 2px #8b438bde );		
+		}
+	}
+
+}
+
+@layer pointer {
+	.pointer {
+		height: 40px;
+		width: 40px;
+		background-color: white;
+		border-radius: 20px;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		z-index: 10000;
+
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 500ms ease;
+		mix-blend-mode: difference;
+	}
+
+	main:hover>.pointer {
+		opacity: 1;
+	}
+
+	.smallPointer {
+		height: 5px;
+		width: 5px;
+		background-color: rgb(0, 0, 0);
+		border-radius: 20px;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		z-index: 2000000;
+
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 500ms ease;
+	}
+
+	main:hover>.smallPointer {
+		opacity: 1;
+	}
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ProjectsCard() {
     return (
-        <div className="yellowV1_card relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden">
+        <div className="yellow_card relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden">
             <div className="w-full h-full absolute top-0 left-0 p-8 z-10">
                 <h2 className="font-bold text-md md:text-l lg:text-3xl">
                     Proyectos y Experimentos
