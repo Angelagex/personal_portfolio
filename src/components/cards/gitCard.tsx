@@ -24,7 +24,9 @@ export default function GitCard() {
                     loading="lazy"
                 />
             </div>
-            <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6" />
+            <a href="http://github.com/Angelagex" target="_blank" rel="noopener noreferrer">
+                <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6" />
+            </a>
             <Image src={gitIconRounded} alt="gitIcon" className="absolute bottom-4 right-4 w-10" />
         </div>
     );

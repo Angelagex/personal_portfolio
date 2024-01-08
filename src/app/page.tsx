@@ -15,7 +15,7 @@ import WeatherCard from '@/components/cards/weatherCard';
 import Pointer from '@/components/ui/pointer';
 import VantaBackground from '@/components/ui/vanta.component';
 
-interface SearchParams {
+export interface SearchParams {
   searchParams: {
     lang: string;
     theme: string;
