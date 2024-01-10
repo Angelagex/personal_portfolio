@@ -1,7 +1,7 @@
-import { getWeatherInfo } from "@/lib/data";
-import { isAfter } from "date-fns";
+import { isAfter, getHours } from "date-fns";
 import NightCard from "../ui/nightCard";
 import DayCard from "../ui/dayCard";
+import { getWeatherInfo } from "@/lib/data";
 
 
 export default async function WeatherCard() {
@@ -9,7 +9,7 @@ export default async function WeatherCard() {
     const data = await getWeatherInfo()
     const now = Date.now();
 
-    const { weather:[{ description, icon }], main: { temp } } = data
+    const { weather:[{ description, icon }], main: { temp }, sys:{sunrise, sunset} } = data
 
     const weatherData = {
         description,
@@ -17,12 +17,20 @@ export default async function WeatherCard() {
         temp
     }
 
+    function getTimeComponent() {
+        if(isAfter(getHours(now), getHours(sunset * 1000) + 1)){
+            return <NightCard data={weatherData} />
+        } 
+        else if (isAfter(getHours(now), getHours(sunrise * 1000))){
+            return <DayCard data={weatherData}/>
+        }
+        return <NightCard data={weatherData}/>
+    }
+
     return (
         <>
             {
-                isAfter(now, data.sys.sunset * 1000) ? <NightCard data={weatherData} />
-                    : isAfter(now, data.sys.sunrise * 1000) ? <DayCard data={weatherData}/>
-                        : <NightCard data={weatherData}/>
+                getTimeComponent()
             }
         </>
     );
