@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function GitCard({ theme }: { theme: string }) {
     return (
-        <div className="white_card rounded-3xl col-span-2 overflow-hidden">
+        <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } rounded-3xl col-span-2 overflow-hidden`}>
 
             <div className="relative w-full h-full p-8">
                 <div className="w-full h-full flex flex-col justify-between">
@@ -14,12 +14,11 @@ export default function GitCard({ theme }: { theme: string }) {
                     </h2>
                 </div>
                 <Image
-                    className="absolute w-full h-full object-cover object-center top-0 left-0 -z-10"
+                    className={`${theme == "dark" ? "opacity-60" : "opacity-80" } absolute w-full h-full object-cover object-center top-0 left-0 -z-10`}
                     src={github}
                     width={498}
                     height={280}
                     decoding="async"
-                    style={{ opacity: "60%" }}
                     alt=""
                     loading="lazy"
                 />

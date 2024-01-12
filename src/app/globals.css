@@ -6,11 +6,25 @@
 
 @layer base {
 	body {
-		@apply h-full antialiased dark:bg-neutral-900 dark:text-neutral-50 text-xl cursor-none;
+		@apply h-full antialiased dark:bg-neutral-900 text-neutral-50 text-xl cursor-none;
 	}
 
 	a {
 		cursor: none;
+	}
+
+	.grain::before {
+		--grain: url("../../public/before5.gif");
+		background: linear-gradient(-45deg, #000000e1, #474747e7),
+		var(--grain);
+		content: '';
+		position:absolute;
+		height: 100%;
+		width: 100%;
+		opacity: 6%;
+		background-blend-mode: soft-light;
+		mix-blend-mode: hue;
+		border-radius: 20px;
 	}
 }
 
@@ -37,18 +51,26 @@
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
+
 	.purple_mix_card_light {
 		border-radius: 1.25rem;
 		border: 1px solid #FFF;
-		background: linear-gradient(229deg, rgba(47, 22, 88, 0.76) 12.25%, rgba(27, 100, 87, 0.712) 92.63%);
+		background: linear-gradient(49deg, rgba(15, 6, 66, 0.699) 12.25%, rgba(84, 0, 87, 0.747) 89.76%);
 		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
 	.blue_card {
 		border-radius: 1.25rem;
-		background: linear-gradient(49deg, rgba(154, 219, 255, 0.20) -1.12%, rgba(69, 195, 255, 0.05) 89.76%, rgba(69, 195, 255, 0.05) 89.76%);
+		background: linear-gradient(49deg, rgba(154, 219, 255, 0.20) -1.12%, rgba(10, 53, 73, 0.281) 89.76%);
 		box-shadow: 0px 4px 15px 0px rgba(202, 232, 248, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.blue_card_light {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(6, 45, 66, 0.699) 12.25%, rgba(0, 59, 87, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -59,10 +81,10 @@
 		backdrop-filter: blur(7.5px);
 	}
 
-	.yellow_card_v2 {
+	.yellow_card_light {
 		border-radius: 1.25rem;
-		background: linear-gradient(49deg, rgba(255, 216, 199, 0.20) -1.12%, rgba(252, 234, 76, 0.16) 40.29%, rgba(255, 147, 69, 0.05) 89.76%);
-		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		background: linear-gradient(49deg, rgba(65, 66, 6, 0.699) 12.25%, rgba(87, 71, 0, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -71,6 +93,14 @@
 		border: 1px solid #FFF;
 		background: linear-gradient(277deg, rgba(255, 255, 255, 0.20) 5.08%, rgba(255, 255, 255, 0.05) 90.62%);
 		box-shadow: 0px 4px 15px 0px rgba(110, 109, 109, 0.63);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.white_card_light {
+		border-radius: 1.25rem;
+		border: 1px solid #FFF;
+		background: linear-gradient(49deg, rgba(0, 0, 0, 0.589) 12.25%, rgba(22, 22, 22, 0.705) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -90,8 +120,15 @@
 
 	.online_card {
 		border-radius: 1.25rem;
-		background: linear-gradient(49deg, rgba(65, 228, 121, 0.20) -1.12%, rgba(184, 255, 186, 0.05) 89.76%);
+		background: linear-gradient(49deg, rgba(65, 228, 79, 0.2) -1.12%, rgba(184, 255, 186, 0.05) 89.76%);
 		box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.online_card_light {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(6, 66, 9, 0.699) 12.25%, rgba(0, 87, 19, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -102,6 +139,13 @@
 		backdrop-filter: blur(7.5px);
 	}
 
+	.offline_card_light {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(51, 51, 51, 0.699) 12.25%, rgba(73, 73, 73, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
+		backdrop-filter: blur(7.5px);
+	}
+
 	.idle_card {
 		border-radius: 1.25rem;
 		background: linear-gradient(49deg, rgba(228, 173, 65, 0.20) -1.12%, rgba(255, 248, 184, 0.05) 89.76%);
@@ -109,10 +153,24 @@
 		backdrop-filter: blur(7.5px);
 	}
 
+	.idle_card_light {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(66, 57, 6, 0.699) 12.25%, rgba(87, 71, 0, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
+		backdrop-filter: blur(7.5px);
+	}
+
 	.dnd_card {
 		border-radius: 1.25rem;
 		background: linear-gradient(49deg, rgba(228, 65, 65, 0.20) -1.12%, rgba(255, 184, 184, 0.05) 89.76%);
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		backdrop-filter: blur(7.5px);
+	}
+
+	.dnd_card_light {
+		border-radius: 1.25rem;
+		background: linear-gradient(49deg, rgba(66, 6, 6, 0.699) 12.25%, rgba(87, 0, 0, 0.747) 89.76%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -360,6 +418,7 @@
 		background-size: 70% 40%;
 		background-repeat: no-repeat;
 	}
+
 	.customUnderline2 {
 		background-image: linear-gradient(90deg, #8135c0, #f02dc6);
 		background-position: bottom right;

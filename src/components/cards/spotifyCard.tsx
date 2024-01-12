@@ -9,8 +9,7 @@ import AudioPlayer from "../ui/audioPlayer";
 export default async function SpotifyCard({ theme }: { theme: string }) {
   const data = await getSpotifyInfo()
   return (
-    <div className="white_card rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20">
-
+    <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20`}>
       <a
         href={data?.external_urls.spotify}
         target="_blank"
@@ -47,7 +46,7 @@ export default async function SpotifyCard({ theme }: { theme: string }) {
         alt={data?.name || "Song coverpage"}
         width={data?.album.images[0].width}
         height={data?.album.images[0].height}
-        className={"absolute top-0 left-0 object-center object-cover -z-[1000] opacity-40"}
+        className={`absolute top-0 left-0 object-center object-cover -z-[1000] ${theme == "dark" ? "opacity-40" : "opacity-60" }`}
         loading="lazy"
       />
     </div >

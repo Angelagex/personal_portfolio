@@ -24,7 +24,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 <WiMoonAltNew className="text-[#23a45b] -ml-3 bg-[#222528] border-4 border-[#222528] rounded-full" />
 
     return (
-        <div className={`${status + "_card"} col-span-1 relative rounded-3xl flex justify-center aspect-square`}>
+        <div className={`${theme == "dark" ? status + "_card" : status + "_card_light grain" } col-span-1 relative rounded-3xl flex justify-center aspect-square`}>
             <div className="w-full h-full flex items-center justify-center">
                 <div className="flex items-end">
                     <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#222528]">
