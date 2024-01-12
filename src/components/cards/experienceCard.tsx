@@ -1,4 +1,4 @@
-export default function ExperienceCard() {
+export default function ExperienceCard({ theme }: { theme: string }) {
     return (
         <div className="purple_mix_card col-span-1 relative rounded-3xl flex flex-col justify-center items-center overflow-hidden aspect-square">
             <div className="flex -ml-4">

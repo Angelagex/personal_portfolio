@@ -30,20 +30,20 @@ export default function Home({ searchParams }: SearchParams) {
     <Pointer />
     <VantaBackground key={theme} theme={theme}/>
     <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20">
-      <ProfileCard />
-      <LanguageCard language={language} />
-      <DarkModeCard />
-      <LinkedInCard />
-      <EmailCard />
-      <ProjectsCard />
-      <GitCard />
-      <ExperienceCard />
-      <IconsCard />
-      <SpotifyCard />
-      <DiscordCard />
-      <MlbbCard />
-      <HdvCard />
-      <WeatherCard />
+      <ProfileCard key={theme} theme={theme}/>
+      <LanguageCard language={language}/>
+      <DarkModeCard key={theme} theme={theme}/>
+      <LinkedInCard key={theme} theme={theme}/>
+      <EmailCard key={theme} theme={theme}/>
+      <ProjectsCard key={theme} theme={theme}/>
+      <GitCard key={theme} theme={theme}/>
+      <ExperienceCard key={theme} theme={theme}/>
+      <IconsCard key={theme} theme={theme}/>
+      <SpotifyCard key={theme} theme={theme}/>
+      <DiscordCard key={theme} theme={theme}/>
+      <MlbbCard key={theme} theme={theme}/>
+      <HdvCard key={theme} theme={theme}/>
+      <WeatherCard key={theme} theme={theme}/>
     </div>
   </main>
 }

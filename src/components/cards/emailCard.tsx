@@ -2,7 +2,7 @@ import Image from "next/image";
 import mail from "@/../public/mail.svg";
 import openButton from "@/../public/openButton.svg";
 
-export default function EmailCard() {
+export default function EmailCard({ theme }: { theme: string }) {
     return (
         <div className="yellow_card col-span-1 relative rounded-3xl flex justify-center items-center overflow-hidden aspect-square">
             <a href="mailto:agelvisangel@gmail.com" target="_blank" rel="noopener noreferrer">

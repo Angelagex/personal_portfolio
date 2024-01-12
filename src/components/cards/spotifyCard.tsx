@@ -6,7 +6,7 @@ import Image from "next/image";
 import { BsSpotify } from "react-icons/bs";
 import AudioPlayer from "../ui/audioPlayer";
 
-export default async function SpotifyCard() {
+export default async function SpotifyCard({ theme }: { theme: string }) {
   const data = await getSpotifyInfo()
   return (
     <div className="white_card rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20">

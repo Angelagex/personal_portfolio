@@ -3,7 +3,7 @@ import github from "@/../public/github.gif";
 import gitIconRounded from "@/../public/gitIconRounded.gif";
 import Image from "next/image";
 
-export default function GitCard() {
+export default function GitCard({ theme }: { theme: string }) {
     return (
         <div className="white_card rounded-3xl col-span-2 overflow-hidden">
 

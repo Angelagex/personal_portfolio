@@ -2,7 +2,7 @@ import Image from "next/image";
 import linkedIn from "@/../public/linkedIn.svg";
 import openButton from "@/../public/openButton.svg";
 
-export default function LinkedInCard() {
+export default function LinkedInCard({ theme }: { theme: string }) {
     return (
         <div className="blue_card col-span-1 relative rounded-3xl flex justify-center aspect-square">
             <a href="http://linkedin.com/in/angel-agelvis" target="_blank">

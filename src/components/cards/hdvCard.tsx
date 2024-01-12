@@ -2,7 +2,7 @@ import Image from "next/image";
 import hdv from "@/../public/hdv.gif";
 
 
-export default async function HdvCard() {
+export default async function HdvCard({ theme }: { theme: string }) {
     return (
         <div className={`white_card col-span-1 relative p-2 rounded-3xl flex justify-center aspect-square`}>
                 <h2 className="text-white text-center font-bold text-base lg:text-lg md:text-base">

@@ -4,7 +4,7 @@ import beatrix from "@/../public/beatrix.png";
 import mythic from "@/../public/mythic.png";
 
 
-export default async function MlbbCard() {
+export default async function MlbbCard({ theme }: { theme: string }) {
     return (
         <div className={`white_card col-span-1 row-span-2 relative p-2 rounded-3xl flex flex-col justify-center aspect-auto`}>
             <section className="z-50 wrapper text-xl lg:text-2xl md:text-3xl">

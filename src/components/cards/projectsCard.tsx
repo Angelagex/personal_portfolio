@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function ProjectsCard() {
+export default function ProjectsCard({ theme }: { theme: string }) {
 
     const searchParams = useSearchParams();
     const params = new URLSearchParams(searchParams);

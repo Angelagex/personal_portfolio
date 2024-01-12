@@ -8,6 +8,7 @@
 	body {
 		@apply h-full antialiased dark:bg-neutral-900 dark:text-neutral-50 text-xl cursor-none;
 	}
+
 	a {
 		cursor: none;
 	}
@@ -36,6 +37,13 @@
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
+	.purple_mix_card_light {
+		border-radius: 1.25rem;
+		border: 1px solid #FFF;
+		background: linear-gradient(229deg, rgba(47, 22, 88, 0.76) 12.25%, rgba(27, 100, 87, 0.712) 92.63%);
+		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
+		backdrop-filter: blur(7.5px);
+	}
 
 	.blue_card {
 		border-radius: 1.25rem;
@@ -62,7 +70,7 @@
 		border-radius: 1.25rem;
 		border: 1px solid #FFF;
 		background: linear-gradient(277deg, rgba(255, 255, 255, 0.20) 5.08%, rgba(255, 255, 255, 0.05) 90.62%);
-		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		box-shadow: 0px 4px 15px 0px rgba(110, 109, 109, 0.63);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -83,7 +91,7 @@
 	.online_card {
 		border-radius: 1.25rem;
 		background: linear-gradient(49deg, rgba(65, 228, 121, 0.20) -1.12%, rgba(184, 255, 186, 0.05) 89.76%);
-		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
+		box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
 
@@ -289,13 +297,15 @@
 
 	@keyframes shine {
 		0% {
-			filter: drop-shadow( 2px -8px 2px #15a89cc0 );		
+			filter: drop-shadow(2px -8px 2px #15a89cc0);
 		}
+
 		50% {
-			filter: drop-shadow( 2px -8px 2px #b66e1baf );		
+			filter: drop-shadow(2px -8px 2px #b66e1baf);
 		}
+
 		100% {
-			filter: drop-shadow( 2px -8px 2px #8b438bde );		
+			filter: drop-shadow(2px -8px 2px #8b438bde);
 		}
 	}
 
@@ -339,5 +349,21 @@
 
 	main:hover>.smallPointer {
 		opacity: 1;
+	}
+}
+
+@layer projects {
+	.customUnderline {
+		filter: drop-shadow(5px 5px 5px black);
+		background-image: linear-gradient(90deg, #8135c0, #f02dc6);
+		background-position: bottom right;
+		background-size: 70% 40%;
+		background-repeat: no-repeat;
+	}
+	.customUnderline2 {
+		background-image: linear-gradient(90deg, #8135c0, #f02dc6);
+		background-position: bottom right;
+		background-size: 70% 40%;
+		background-repeat: no-repeat;
 	}
 }

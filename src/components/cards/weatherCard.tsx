@@ -4,7 +4,7 @@ import DayCard from "../ui/dayCard";
 import { getWeatherInfo } from "@/lib/data";
 
 
-export default async function WeatherCard() {
+export default async function WeatherCard({ theme }: { theme: string }) {
 
     const data = await getWeatherInfo()
     const now = Date.now();
