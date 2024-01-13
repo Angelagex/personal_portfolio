@@ -17,9 +17,9 @@ export default function ProjectsCard({ theme, content, title }: {
     return (
         <div className={`${theme == "dark" ? "white_card" : "white_card_light grain"} relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden`}>
             <div className="w-full h-full absolute top-0 left-0 p-8 z-10">
-                <h2 className="font-bold text-md md:text-l lg:text-3xl">
+                <a href={`${pathname}/projects?${params.toString()}`} className="font-bold text-md md:text-l lg:text-3xl z-20 interactable">
                     {title}
-                </h2>
+                </a>
                 <p className="text-sm lg:text-base md:w-4/5 lg:w-5/6 lg:mt-4">
                     {content}
                 </p>

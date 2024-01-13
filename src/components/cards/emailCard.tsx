@@ -8,7 +8,9 @@ export default function EmailCard({ theme }: { theme: string }) {
             <a href="mailto:agelvisangel@gmail.com" target="_blank" rel="noopener noreferrer">
                 <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6" />
             </a>
-            <Image src={mail} alt="linkedInIcon" className="w-3/6 interactable" />
+            <a href="http://linkedin.com/in/angel-agelvis" target="_blank" className="w-full m-auto z-20">
+                <Image src={mail} alt="linkedInIcon" className="w-3/6 interactable m-auto" />
+            </a>
         </div>
     );
 }

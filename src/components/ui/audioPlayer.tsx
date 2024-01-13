@@ -22,7 +22,7 @@ export default function AudioPlayer({url}: {url: string}) {
     }
     
     return (
-        <div className="flex items-center z-20">
+        <div className="flex items-center relative z-20 interactable">
             {animation == "play" 
             ? <IoPauseCircle onClick={handlePause} className="w-8 h-8"/> 
             : <IoPlayCircle onClick={handlePlay} className="w-8 h-8"/>}

@@ -9,9 +9,9 @@ export default function GitCard({ theme }: { theme: string }) {
 
             <div className="relative w-full h-full p-8">
                 <div className="w-full h-full flex flex-col justify-between">
-                    <h2 className="font-bold text-md md:text-l lg:text-3xl">
+                    <a href="http://github.com/Angelagex" target="_blank" className="font-bold text-md md:text-l lg:text-3xl z-20 interactable">
                         Github
-                    </h2>
+                    </a>
                 </div>
                 <Image
                     className={`${theme == "dark" ? "opacity-60" : "opacity-80" } absolute w-full h-full object-cover object-center top-0 left-0 -z-10`}

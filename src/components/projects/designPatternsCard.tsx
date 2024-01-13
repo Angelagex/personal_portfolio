@@ -24,7 +24,7 @@ function DesignPatternsCard({title, content, theme}: {title: string, content: st
                 {content}
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
-                <a href="https://github.com/Angelagex/designPatterns" className="m-auto flex items-center justify-center">
+                <a href="https://github.com/Angelagex/designPatterns" className="m-auto flex items-center justify-center interactable z-20">
                     <Image src={gitIconRounded} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">Angelagex/designPatterns</p>
                 </a>

@@ -21,7 +21,7 @@ export default function ({ searchParams }: SearchParams) {
             <Pointer />
             <VantaBackground key={theme} theme={theme} />
             <Header theme={theme} title={tProjects("title")} />
-            <div className="grid gap-2 grid-cols-3 grid-rows-4 md:gap-4 my-5 container mx-auto xl:px-20">
+            <div className="grid gap-2 grid-cols-3 grid-rows-4 md:gap-4 my-5 container mx-auto xl:px-20 relative z-20">
                 <BashCard theme={theme} title={tBash("title")} content={tBash.rich("content", {
                     under: (chunks) => <p className="customUnderline2 inline">{chunks}</p>
                 })} />
