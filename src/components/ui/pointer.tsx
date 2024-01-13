@@ -32,14 +32,13 @@ export default function Pointer() {
     }
   }
 
-  const elements = document.querySelectorAll('.interactable');
-  elements.forEach(element => {
-    element.addEventListener('mouseover', () => handleAnimationStart())
-    element.addEventListener('mouseout', () => handleAnimationEnd())
-    element.addEventListener('touchstart', () => handleAnimationStart())
-    element.addEventListener('touchend', () => handleAnimationEnd())
-    element.addEventListener('touchcancel', () => handleAnimationEnd())
-  })
+  if (typeof document !== 'undefined') {
+    const interactables = document.querySelectorAll('.interactable');
+    interactables.forEach(element => {
+      element.addEventListener('mouseover', () => handleAnimationStart())
+      element.addEventListener('mouseout', () => handleAnimationEnd())
+    })
+  }
 
   /*
     //Previous implementation (it was generating lag)   
