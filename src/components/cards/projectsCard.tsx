@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function ProjectsCard({ theme }: { theme: string }) {
+export default function ProjectsCard({ theme, content, title }: { theme: string,
+title: string, content: string }) {
 
     const searchParams = useSearchParams();
     const params = new URLSearchParams(searchParams);
@@ -13,10 +14,10 @@ export default function ProjectsCard({ theme }: { theme: string }) {
         <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden`}>
             <div className="w-full h-full absolute top-0 left-0 p-8 z-10">
                 <h2 className="font-bold text-md md:text-l lg:text-3xl">
-                    Proyectos y Experimentos
+                    {title}
                 </h2>
                 <p className="text-sm lg:text-base md:w-4/5 lg:w-5/6 lg:mt-4">
-                    Adéntrate en mi biblioteca digital, donde aguarda una colección de mis proyectos y experimentos. ¡Explora y déjate inspirar!
+                    {content}
                 </p>
             </div>
             <Link href={`/projects?${params.toString()}`}>

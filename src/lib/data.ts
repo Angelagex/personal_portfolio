@@ -29,9 +29,9 @@ export async function getSpotifyInfo() {
     return recentTracks.body.items[0].track
 }
 
-export async function getWeatherInfo() {
+export async function getWeatherInfo(locale: string) {
     
-    const fetchData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Bogota,CO&units=metric&&lang=es&appid=${process.env.WEATHER_API_KEY}`)    
+    const fetchData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Bogota,CO&units=metric&&lang=${locale}&appid=${process.env.WEATHER_API_KEY}`)    
     return fetchData.json()
     
 }

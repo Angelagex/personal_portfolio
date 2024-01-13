@@ -1,0 +1,20 @@
+{
+    "Profile": {
+      "title": "Hola! Soy {name} ",
+      "body": "Desarrollador Fullstack con experiencia implementando soluciones en Typescript, NextJs, Java, AWS y mucho más. Soy un apasionado por la innovación, afrontar nuevos retos, el aprendizaje constante y experimentar con nuevas tecnologias.",
+      "footer": "¿Listos para explorar el futuro juntos?"
+    },
+    "Projects": {
+      "title": "Proyectos y Experimentos",
+      "content": "Adéntrate en mi biblioteca digital, donde aguarda una colección de mis proyectos y experimentos. ¡Explora y déjate inspirar!"
+    },
+    "Experience": {
+      "content": "Años de experiencia"
+    },
+    "Spotify": {
+      "title": "Escuchado Recientemente"
+    },
+    "Hdv": {
+      "title": "Presiona para obtener la hoja faltante"
+    }
+}

@@ -3,10 +3,9 @@ import spotify from "@/../public/spotify.gif";
 import spotifyMood from "@/../public/spotifyMood.gif";
 import { getSpotifyInfo } from "@/lib/data";
 import Image from "next/image";
-import { BsSpotify } from "react-icons/bs";
 import AudioPlayer from "../ui/audioPlayer";
 
-export default async function SpotifyCard({ theme }: { theme: string }) {
+export default async function SpotifyCard({ theme, title }: { theme: string, title: string }) {
   const data = await getSpotifyInfo()
   return (
     <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20`}>
@@ -19,7 +18,7 @@ export default async function SpotifyCard({ theme }: { theme: string }) {
         <Image src={spotify} alt="spotifyIcon" className="-z-1 absolute -top-1 -left-8 w-32 lg:top-8 lg:-left-4" />
       </a>
       <p className="text-[#ffffff] font-bold text-lg lg:text-xl md:text-lg">
-        Escuchado Recientemente
+        {title}
       </p>
       <div className="flex mb-2 flex-col" >
         <p className="text-[#ffffff] w-full xl:text-lg lg:text-base text-xs font-semibold truncate">

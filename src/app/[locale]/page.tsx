@@ -14,6 +14,7 @@ import SpotifyCard from '@/components/cards/spotifyCard';
 import WeatherCard from '@/components/cards/weatherCard';
 import Pointer from '@/components/ui/pointer';
 import VantaBackground from '@/components/ui/vanta.component';
+import { useTranslations } from 'next-intl';
 
 export interface SearchParams {
   searchParams: {
@@ -23,27 +24,27 @@ export interface SearchParams {
 }
 
 export default function Home({ searchParams }: SearchParams) {
-  const language = searchParams.lang || "ES"
   const theme = searchParams.theme || "dark"
-
+  const tProjects = useTranslations('Projects');
+  const tSpotify = useTranslations('Spotify');
   return <main>
     <Pointer />
-    <VantaBackground key={theme} theme={theme}/>
+    <VantaBackground key={theme} theme={theme} />
     <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20">
-      <ProfileCard theme={theme}/>
-      <LanguageCard theme={theme} language={language}/>
-      <DarkModeCard theme={theme}/>
-      <LinkedInCard theme={theme}/>
-      <EmailCard theme={theme}/>
-      <ProjectsCard theme={theme}/>
-      <GitCard theme={theme}/>
-      <ExperienceCard theme={theme}/>
-      <IconsCard theme={theme}/>
-      <SpotifyCard theme={theme}/>
-      <DiscordCard theme={theme}/>
-      <MlbbCard theme={theme}/>
-      <HdvCard theme={theme}/>
-      <WeatherCard theme={theme}/>
+      <ProfileCard theme={theme} />
+      <LanguageCard theme={theme} />
+      <DarkModeCard theme={theme} />
+      <LinkedInCard theme={theme} />
+      <EmailCard theme={theme} />
+      <ProjectsCard theme={theme} title={tProjects("title")} content={tProjects("content")} />
+      <GitCard theme={theme} />
+      <ExperienceCard theme={theme} />
+      <IconsCard theme={theme} />
+      <SpotifyCard theme={theme} title={tSpotify("title")}/>
+      <DiscordCard theme={theme} />
+      <MlbbCard theme={theme} />
+      <HdvCard theme={theme} />
+      <WeatherCard theme={theme} />
     </div>
   </main>
 }

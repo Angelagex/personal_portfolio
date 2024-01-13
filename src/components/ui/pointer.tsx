@@ -12,7 +12,7 @@ export default function Pointer() {
   const smallKeyFrames = {
     transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`
   }
-  bigDot.current?.animate(keyFrames, { duration: 2000, fill: 'forwards' })
+  bigDot.current?.animate(keyFrames, { duration: 1500, fill: 'forwards' })
   smallDot.current?.animate(smallKeyFrames, { duration: 0, fill: 'forwards' })
   window.onmousemove = e => {
     const element = (e.target as HTMLElement).closest('.interactable')

@@ -1,6 +1,8 @@
 'use client'
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "@/navigation";
+import { useSearchParams } from "next/navigation";
+
 
 enum Languages {
     ENGLISH = "EN",
@@ -13,10 +15,9 @@ export default function LanguageSelection() {
     const pathname = usePathname();
     const { replace } = useRouter();
 
-    const handleLanguage = (language: string) => {
+    const handleLanguage = (nextLocale: string) => {
         const params = new URLSearchParams(searchParams);
-        params.set('lang', language);
-        replace(`${pathname}?${params.toString()}`);
+        replace(`${pathname}?${params.toString()}`, {locale: nextLocale.toLowerCase()});
     }
 
     return (

@@ -9,9 +9,6 @@ import { RiMoonFill } from "react-icons/ri";
 import { WiMoonAltNew } from "react-icons/wi";
 
 
-
-
-
 export default async function DiscordCard({ theme }: { theme: string }) {
     const status: string = await getDiscordStatus()
     const icon = status == "offline" ?

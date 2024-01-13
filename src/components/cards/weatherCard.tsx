@@ -2,11 +2,12 @@ import { isAfter, getHours } from "date-fns";
 import NightCard from "../ui/nightCard";
 import DayCard from "../ui/dayCard";
 import { getWeatherInfo } from "@/lib/data";
+import { useLocale } from "next-intl";
 
 
 export default async function WeatherCard({ theme }: { theme: string }) {
-
-    const data = await getWeatherInfo()
+    const locale = useLocale()
+    const data = await getWeatherInfo(locale)
     const now = Date.now();
 
     const { weather:[{ description, icon }], main: { temp }, sys:{sunrise, sunset} } = data
