@@ -4,7 +4,19 @@ const withNextIntl = require('next-intl/plugin')();
 const nextConfig = {
   distDir: 'dist',
   images: {
-    domains: ["i.scdn.co", "openweathermap.org"]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: "i.scdn.co",
+        pathname: "**"
+      },
+      {
+        protocol: 'https',
+        hostname: "openweathermap.org",
+        pathname: "**"
+      }
+    ]
+    
   }
 }
 
