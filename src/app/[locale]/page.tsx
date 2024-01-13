@@ -28,9 +28,9 @@ export default function Home({ searchParams }: SearchParams) {
   const tProjects = useTranslations('Projects');
   const tSpotify = useTranslations('Spotify');
   return <main>
-    <Pointer />
     <VantaBackground key={theme} theme={theme} />
-    <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20">
+    <Pointer />
+    <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20 relative z-20">
       <ProfileCard theme={theme} />
       <LanguageCard theme={theme} />
       <DarkModeCard theme={theme} />
@@ -40,7 +40,7 @@ export default function Home({ searchParams }: SearchParams) {
       <GitCard theme={theme} />
       <ExperienceCard theme={theme} />
       <IconsCard theme={theme} />
-      <SpotifyCard theme={theme} title={tSpotify("title")}/>
+      <SpotifyCard theme={theme} title={tSpotify("title")} />
       <DiscordCard theme={theme} />
       <MlbbCard theme={theme} />
       <HdvCard theme={theme} />

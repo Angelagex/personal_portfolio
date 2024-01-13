@@ -14,13 +14,24 @@ export default function Pointer() {
   }
   bigDot.current?.animate(keyFrames, { duration: 1500, fill: 'forwards' })
   smallDot.current?.animate(smallKeyFrames, { duration: 0, fill: 'forwards' })
-  window.onmousemove = e => {
-    const element = (e.target as HTMLElement).closest('.interactable')
-    if (element) {
-      console.log(element.className.includes('title'));
-      console.log(element.clientWidth, element.className);
+
+
+  const handleMouseMove = (e: MouseEvent) => {
+    const element = (e.target as HTMLElement).closest('.interactable');
+    if (element && !bigDot.current?.classList.contains("activeColor")) {
+      bigDot.current?.classList.add("activeColor");
+      console.log("ok");
+      
     }
+    else if (!element && bigDot.current?.classList.contains("activeColor")) {
+      bigDot.current?.classList.remove("activeColor");
+    }
+  };
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('mousemove', handleMouseMove);
   }
+
   return (
     <>
       <div className="pointer" ref={bigDot}></div>

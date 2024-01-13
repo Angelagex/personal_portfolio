@@ -8,7 +8,7 @@ export default function LinkedInCard({ theme }: { theme: string }) {
             <a href="http://linkedin.com/in/angel-agelvis" target="_blank">
                 <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6" />
             </a>
-            <Image src={linkedIn} alt="linkedInIcon" className="w-3/6 " />
+            <Image src={linkedIn} alt="linkedInIcon" className="w-3/6  interactable" />
         </div>
     );
 }

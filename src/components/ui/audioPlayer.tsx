@@ -24,8 +24,8 @@ export default function AudioPlayer({url}: {url: string}) {
     return (
         <div className="flex items-center z-20">
             {animation == "play" 
-            ? <IoPauseCircle onClick={handlePause} className="w-6 h-6"/> 
-            : <IoPlayCircle onClick={handlePlay} className="w-6 h-6"/>}
+            ? <IoPauseCircle onClick={handlePause} className="w-8 h-8"/> 
+            : <IoPlayCircle onClick={handlePlay} className="w-8 h-8"/>}
             <div className="w-10 h-8 ml-2 relative inline-flex items-center justify-between">
                 <div className={`bar ${animation}`}></div>
                 <div className={`bar ${animation}`}></div>

@@ -16,5 +16,24 @@
     },
     "Hdv": {
       "title": "Presiona para obtener la hoja faltante"
+    },
+    "ProjectsPage": {
+      "title": "Proyectos"
+    },
+    "Bash": {
+      "title": "Scripting",
+      "content": "Una colección pública de los conceptos más comunes de <under>Bash</under>. Algunos <under>scripts</under> que me ayudan a agilizar mis actividades diarias"
+    },
+    "Design": {
+      "title": "Patrones de Diseño",
+      "content": "Un proyecto público que muestra ejemplos de TypeScript de los <under>patrones de diseño</under> más ampliamente utilizados"
+    },
+    "Poke": {
+      "title": "Poke Store",
+      "content": "Proyecto en <under>React y Typescript</under> creado como parte de un desafío de Sofka"
+    },
+    "Portfolio": {
+      "title": "Portafolio Personal",
+      "content": "Portafolio en <under>Next.js y TypeScript</under> que exhibe la mejora de mis habilidades de desarrollo"
     }
 }

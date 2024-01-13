@@ -1,7 +1,7 @@
 {
     "Profile": {
       "title": "Hi! I'm {name} ",
-      "body": "Fullstack Developer with experience implementing solutions using Typescript, NextJs, Java, AWS and so on. I am passionate about innovation, embracing new challenges, constant learning, and experimenting with new technologies.",
+      "body": "Fullstack Developer with experience implementing solutions using Typescript, NextJs, Java, AWS and so on. I am passionate about innovation, embracing new challenges, constant learning and experimenting with new technologies.",
       "footer": "Ready to explore the future together?"
     },
     "Projects": {
@@ -16,5 +16,24 @@
     },
     "Hdv": {
       "title": "Press to obtain the missing sheet"
+    },
+    "ProjectsPage": {
+      "title": "Projects"
+    },
+    "Bash": {
+      "title": "Scripting",
+      "content": "A public collection of the most common <under>bash</under> concepts. A few <under>scripts</under> that help me streamline my daily activities"
+    },
+    "Design": {
+      "title": "Design Patterns",
+      "content": "A public project showcasing typescript examples of the most widely used <under>design patterns</under>"
+    },
+    "Poke": {
+      "title": "Poke Store",
+      "content": "<under>React and Typescript</under> project created as part of a Sofka challenge"
+    },
+    "Portfolio": {
+      "title": "Personal Portfolio",
+      "content": "<under>Nextjs and Typescript</under> portfolio that showcases the improve of my development skills"
     }
 }
