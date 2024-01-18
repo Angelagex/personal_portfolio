@@ -10,17 +10,17 @@ export default function DayCard({ data: { description, icon, temp } }: {
 }) {
     return (
         <div className="white_card relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden">
-            <div className="w-full h-full absolute top-0 left-0 p-8 z-10">
+            <div className="w-full h-full absolute top-0 left-0 p-8 xl:p-12 z-10">
                 <div className="flex items-center -mb-2">
-                    <h2 className="font-bold text-md md:text-l lg:text-3xl">
+                    <h2 className="font-bold text-md md:text-l lg:text-3xl xl:text-4xl">
                         {temp} °C
                     </h2>
                     <Image src={`https://openweathermap.org/img/wn/${icon}@2x.png`} width={50} height={50} className="w-12 h-12 ml-2" alt="" loading="lazy" />
                 </div>
-                <p className="font-medium text-xs lg:text-sm md:w-4/5 lg:w-5/6 lg:mt-4">
+                <p className="font-medium text-xs lg:text-sm xl:text-base md:w-4/5 lg:w-5/6 lg:mt-4 ">
                     {description.toUpperCase()}
                 </p>
-                <p className="font-medium text-xs lg:text-sm md:w-4/5 lg:w-5/6 lg:mt-4">
+                <p className="font-medium text-xs lg:text-sm xl:text-base md:w-4/5 lg:w-5/6 lg:mt-2">
                     BOGOTA - COLOMBIA
                 </p>
             </div>

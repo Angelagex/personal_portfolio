@@ -18,19 +18,19 @@ export default async function DiscordCard({ theme }: { theme: string }) {
             : status == "dnd" ?
                 <FaMinusCircle className="text-[#f23e42] -ml-3 bg-[#222528] border-4 border-[#222528] rounded-full" />
                 :
-                <WiMoonAltNew className="text-[#23a45b] -ml-3 bg-[#222528] border-4 border-[#222528] rounded-full" />
+                <WiMoonAltNew className="text-[#23a45b] text-sm sm:text-xl -ml-3 bg-[#222528] border-2 sm:border-4 border-[#222528] rounded-full" />
 
     return (
         <div className={`${theme == "dark" ? status + "_card" : status + "_card_light grain"} col-span-1 relative rounded-3xl flex justify-center aspect-square`}>
-            <div className="w-full h-full flex items-center justify-center interactable z-20">
+            <div className="w-full h-full flex items-center justify-center interactable z-20 -ml-2 sm:-ml-4">
                 <div className="flex items-end">
-                    <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#222528]">
-                        <Image src={discord_pp} alt="discord_pp" className="-mt-6" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 xl:w-14 xl:h-14 rounded-full overflow-hidden border-2 border-[#222528]">
+                        <Image src={discord_pp} alt="discord_pp" className="-mt-4 sm:-mt-6 xl:-mt-8" />
                     </div>
                     {icon}
                 </div>
 
-                <a href="https://discord.com/users/448913483833147403" target="_blank" className="font-bold text-sm md:text-l lg:text-l">
+                <a href="https://discord.com/users/448913483833147403" target="_blank" className="font-bold text-xs sm:text-sm md:text-lg xl:text-xl">
                     {status == "dnd" ? "DO NOT DISTURB" : status.toUpperCase()}
                 </a>
             </div>
@@ -38,7 +38,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </a>
             <div className="w-full h-full absolute">
-                <Image src={discord_no_bg} className="absolute bottom-2 right-2 w-14 opacity-40" alt="" loading="lazy" />
+                <Image src={discord_no_bg} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
             </div>
         </div>
     );

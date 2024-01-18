@@ -4,6 +4,7 @@ import Image from "next/image";
 import pokeStore2 from "@/../public/pokeStore2.png";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
 import gitIconRounded from "@/../public/gitIconRounded.gif";
+import pokeballLogo from "@/../public/pokeballLogo.png";
 
 
 function PokeStoreCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {
@@ -14,7 +15,7 @@ function PokeStoreCard({title, content, theme}: {title: string, content: string 
         <article
             onMouseEnter={() => setShowItems(true)}
             onMouseLeave={() => setShowItems(false)}
-            className={`${theme == "dark" ? "white_card" : "white_card_light grain" }  col-span-1 row-span-2 h-full relative p-2 rounded-3xl flex flex-col justify-center aspect-auto`}
+            className={`${theme == "dark" ? "white_card" : "white_card_light grain"} col-span-1 row-span-2 h-full relative p-2 rounded-3xl flex flex-col justify-center aspect-auto`}
         >
             <header className={`${showItems ? "hidden" : "customUnderline"} z-20 font-bold text-center text-xl md:text-3xl m-auto`}>
                 {title}
@@ -23,9 +24,13 @@ function PokeStoreCard({title, content, theme}: {title: string, content: string 
                 {content}
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
-                <a href="https://github.com/Angelagex/pokeStore" className="m-auto flex items-center justify-center interactable z-20">
+                <a href="https://github.com/Angelagex/pokeStore" target="_blank" className="m-auto flex items-center justify-center interactable z-20">
                     <Image src={gitIconRounded} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">Angelagex/pokeStore</p>
+                </a>
+                <a href="https://angelagex.github.io/pokeStore/" target="_blank" className="m-auto flex items-center justify-center interactable mt-3 z-20">
+                    <Image src={pokeballLogo} alt="gitIcon" className="w-8" />
+                    <p className="text-sm pl-2">PokeStore</p>
                 </a>
             </footer>
             <Image src={pokeStore2} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />

@@ -7,8 +7,8 @@ import mllogonobg from "@/../public/mllogonobg.png";
 
 export default async function MlbbCard({ theme }: { theme: string }) {
     return (
-        <div className={`${theme == "dark" ? "white_card" : "white_card_light grain grain" } col-span-1 row-span-2 relative p-2 rounded-3xl flex flex-col justify-center aspect-auto`}>
-            <section className="z-50 wrapper text-xl lg:text-2xl md:text-3xl">
+        <div className={`${theme == "dark" ? "white_card" : "white_card_light grain grain"} col-span-1 row-span-2 relative p-2 rounded-3xl flex flex-col justify-center aspect-auto`}>
+            <section className="z-50 wrapper text-base sm:text-xl lg:text-2xl md:text-3xl xl:text-4xl">
                 <div className="font-bold top">
                     {" BEATRIX"}
                 </div>
@@ -16,7 +16,7 @@ export default async function MlbbCard({ theme }: { theme: string }) {
                     {" BEATRIX"}
                 </div>
             </section>
-            <section className="z-50 wrapper text-xs lg:text-xs md:text-xs">
+            <section className="z-50 wrapper text-xs sm:text-base xl:text-xl">
                 <div className="font-bold top">
                     {"# 35 - BOGOTA"}
                 </div>
@@ -24,10 +24,20 @@ export default async function MlbbCard({ theme }: { theme: string }) {
                     {"# 35 - BOGOTA"}
                 </div>
             </section>
-            <Image src={mythic} alt="beatrixImage" className="-z-10 absolute w-14 top-4 right-4" />
-            <Image src={mllogonobg} alt="beatrixImage" className="-z-10 absolute w-32 top-6 left-4 drop-shadow" />
-            <Image src={beatrix} alt="beatrixImage" className="-z-10 absolute w-[200px] bottom-0 -left-2 beatrix" />
-            <Image src={mlbgNoText2} className={`fixed h-full top-0 left-0 object-center object-cover -z-[1000] rounded-3xl ${theme == "dark" ? "opacity-50" : "opacity-70"}`} alt="" loading="lazy" />
+            <section className="z-50 wrapper text-xs sm:text-base xl:text-xl whitespace-pre">
+                <div className="font-bold top">
+                    {"    ID: 536699759"}
+                </div>
+                <div className="font-bold bottom aria-hidden">
+                    {"    ID: 536699759"}
+                </div>
+            </section>
+            <Image src={mythic} alt="mythicLogo" className="-z-10 absolute w-8 sm:w-12 lg:w-16 xl:w-20 top-2 right-2 sm:top-4 sm:right-4" />
+            <a href="https://play.google.com/store/apps/details?id=com.mobile.legends" target="_blank" className="interactable">
+                <Image src={mllogonobg} alt="mlLogo" className="-z-10 absolute w-20 sm:w-24 lg:w-32 xl:w-40 top-4 left-2 sm:top-6 sm:left-4 xl:top-6 xl:left-6 drop-shadow" />
+            </a>
+            <Image src={beatrix} alt="beatrixImage" className="-z-10 hidden md:absolute md:block sm:w-[150px] md:w-[200px] xl:w-[300px] bottom-0 -left-2 beatrix" />
+            <Image src={mlbgNoText2} className={`fixed h-full top-0 left-0 object-center object-cover -z-[1000] rounded-3xl ${theme == "dark" ? "opacity-50" : "opacity-70"}`} alt="mlBackground" loading="lazy" />
         </div>
     );
 }

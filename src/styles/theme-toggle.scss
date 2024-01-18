@@ -174,3 +174,16 @@
 		transform: translateX(calc(-1 * var(--fPos)));
 	}
 }
+
+@media (min-width: 1280px) {
+	.switch {
+		&_toggle {
+			width: 3rem;
+			height: 3rem;
+		}
+		&__wrapper {
+			width: 5rem;
+			height: 2.55rem;
+		}
+	}
+}

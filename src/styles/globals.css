@@ -6,7 +6,7 @@
 
 @layer base {
 	body {
-		@apply h-full antialiased dark:bg-neutral-900 text-neutral-50 text-xl cursor-none;
+		@apply h-full antialiased dark:bg-neutral-900 text-neutral-50 text-xl sm:cursor-none;
 	}
 
 	a {
@@ -465,7 +465,15 @@
 			filter: drop-shadow(6px -8px 6px rgb(98, 0, 234) 66%);
 		}
 	}
-	
+
+	@media (max-width: 640px) {
+		.pointer {
+			display: none;
+		}
+		.smallPointer {
+			display: none;
+		}
+	}
 }
 
 @layer projects {

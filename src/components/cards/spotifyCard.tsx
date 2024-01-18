@@ -8,16 +8,16 @@ import AudioPlayer from "../ui/audioPlayer";
 export default async function SpotifyCard({ theme, title }: { theme: string, title: string }) {
   const data = await getSpotifyInfo()
   return (
-    <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } rounded-3xl col-span-2 overflow-hidden p-4 pt-6 pl-12 lg:p-12 lg:pl-20`}>
+    <div className={`${theme == "dark" ? "white_card" : "white_card_light grain" } rounded-3xl col-span-2 row-span-1 overflow-hidden p-4 pt-6 pl-12 md:p-8 md:pl-[3.8rem] lg:p-12 lg:pl-20`}>
       <a
         href={data?.external_urls.spotify}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Spotify"
       >
-        <Image src={spotify} alt="spotifyIcon" className="-z-1 absolute -top-1 -left-8 w-32 lg:top-8 lg:-left-4 interactable" />
+        <Image src={spotify} alt="spotifyIcon" className="-z-1 absolute w-24 top-4 -left-4 md:-left-4 lg:top-10 lg:left-0 xl:top-8 xl:-left-4 lg:w-30 xl:w-36 interactable" />
       </a>
-      <p className="text-[#ffffff] font-bold text-lg lg:text-xl md:text-lg">
+      <p className="text-[#ffffff] font-bold text-xs sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
         {title}
       </p>
       <div className="flex mb-2 flex-col" >
@@ -37,7 +37,7 @@ export default async function SpotifyCard({ theme, title }: { theme: string, tit
         rel="noopener noreferrer"
         aria-label="Spotify"
       >
-        <Image src={spotifyMood} alt="spotifyIcon" className="interactable z-20 absolute bottom-0 right-0 w-28" />
+        <Image src={spotifyMood} alt="spotifyIcon" className="interactable z-20 absolute bottom-0 right-0 w-28 xl:w-36" />
       </a>
 
       <Image
@@ -45,7 +45,7 @@ export default async function SpotifyCard({ theme, title }: { theme: string, tit
         alt={data?.name || "Song coverpage"}
         width={data?.album.images[0].width}
         height={data?.album.images[0].height}
-        className={`absolute top-0 left-0 object-center object-cover -z-[1000] ${theme == "dark" ? "opacity-40" : "opacity-60" }`}
+        className={`absolute top-0 left-0 object-center object-cover w-full -z-[1000] ${theme == "dark" ? "opacity-40" : "opacity-60" }`}
         loading="lazy"
       />
     </div >
