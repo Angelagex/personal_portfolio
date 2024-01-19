@@ -15,7 +15,7 @@ const nextConfig = {
         pathname: "**"
       }
     ],
-    formats: ['image/webp' | 'image/png' | 'image/gif' | 'image/jpg'],
+    formats: ['image/webp'],
 
   }
 }
