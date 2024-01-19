@@ -8,7 +8,7 @@ import PokeStoreCard from "@/components/projects/pokeStoreCard";
 import PortfolioCard from "@/components/projects/portfolioCard";
 import { useTranslations } from "next-intl";
 
-export default function ({ searchParams }: SearchParams) {
+export default function Porjects({ searchParams }: SearchParams) {
     const theme = searchParams.theme || "dark"
     const tBash = useTranslations('Bash');
     const tDesign = useTranslations('Design');
@@ -30,10 +30,10 @@ export default function ({ searchParams }: SearchParams) {
                 })} />
                 <PokeStoreCard theme={theme} title={tPoke("title")} content={tPoke.rich("content", {
                     under: (chunks) => <p className="customUnderline2 inline">{chunks}</p>
-                })}  />
+                })} />
                 <PortfolioCard theme={theme} title={tPortfolio("title")} content={tPortfolio.rich("content", {
                     under: (chunks) => <p className="customUnderline2 inline">{chunks}</p>
-                })}  />
+                })} />
                 <div className={`opacity-0 white_card col-span-1 relative p-2 rounded-3xl flex flex-col justify-center aspect-square`}>
                 </div>
             </div>
