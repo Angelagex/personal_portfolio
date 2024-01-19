@@ -1,6 +1,6 @@
-import openButton from "@/../public/openButton.svg";
-import github from "@/../public/github.gif";
-import gitIconRounded from "@/../public/gitIconRounded.gif";
+import openButton from "openButton.svg";
+import github from "github.gif";
+import gitIconRounded from "gitIconRounded.gif";
 import Image from "next/image";
 
 export default function GitCard({ theme }: { theme: string }) {

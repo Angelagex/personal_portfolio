@@ -1,4 +1,4 @@
-import day2 from "@/../public/day2.gif";
+import day2 from "day2.gif";
 import Image from "next/image";
 
 export default function DayCard({ data: { description, icon, temp } }: {

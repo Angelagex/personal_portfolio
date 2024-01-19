@@ -1,7 +1,7 @@
 import Image from "next/image";
-import discord_no_bg from "@/../public/discord_no_bg.gif";
-import openButton from "@/../public/openButton.svg";
-import discord_pp from "@/../public/discord_pp.png";
+import discord_no_bg from "discord_no_bg.gif";
+import openButton from "openButton.svg";
+import discord_pp from "discord_pp.png";
 import { getDiscordStatus } from "@/lib/data";
 import { BsRecordCircleFill, } from "react-icons/bs";
 import { FaMinusCircle } from "react-icons/fa";

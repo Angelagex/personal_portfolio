@@ -1,4 +1,4 @@
-import starfall from "@/../public/starfall.gif";
+import starfall from "starfall.gif";
 import Image from "next/image";
 
 export default function NightCard({ data: { description, icon, temp } }: {

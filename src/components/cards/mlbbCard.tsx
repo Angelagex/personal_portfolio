@@ -1,8 +1,8 @@
 import Image from "next/image";
-import mlbgNoText2 from "@/../public/mlbgNoText2.jpg";
-import beatrix from "@/../public/beatrix.png";
-import mythic from "@/../public/mythic.png";
-import mllogonobg from "@/../public/mllogonobg.png";
+import mlbgNoText2 from "mlbgNoText2.jpg";
+import beatrix from "beatrix.png";
+import mythic from "mythic.png";
+import mllogonobg from "mllogonobg.png";
 
 
 export default async function MlbbCard({ theme }: { theme: string }) {
