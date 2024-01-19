@@ -17,7 +17,7 @@ export default function ProfileCard({ theme }: { theme: string }) {
                 <p className="text-xs sm:text-sm md:text-base lg:text-xl md:pb-2 xl:text-2xl">{t('footer')}</p>
             </div>
             <div className="col-span-1 xl:col-span-2">
-                <Image src={me.src} alt="profileCartoonImage" className="absolute bottom-0 right-0 hidden md:block md:w-72 lg:w-[22rem] xl:w-[28rem] interactable scale-x-[-1] drop-shadow-xl" />
+                <Image src={me.blurDataURL || ''} alt="profileCartoonImage" className="absolute bottom-0 right-0 hidden md:block md:w-72 lg:w-[22rem] xl:w-[28rem] interactable scale-x-[-1] drop-shadow-xl" />
             </div>
         </article>
     );
