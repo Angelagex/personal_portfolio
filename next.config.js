@@ -5,9 +5,8 @@ const nextConfig = {
   experimental: {
     runtime: 'experimental-edge',
   },
-  distDir: 'dist',
   images: {
-    remotePatterns: [
+    remotePatterns: s[
       {
         protocol: 'https',
         hostname: "i.scdn.co",
