@@ -2,6 +2,7 @@
 
 const withNextIntl = require('next-intl/plugin')();
 const nextConfig = {
+  target: "serverless",
   images: {
     domains: [
       "i.scdn.co",
