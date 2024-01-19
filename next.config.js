@@ -2,10 +2,6 @@
 
 const withNextIntl = require('next-intl/plugin')();
 const nextConfig = {
-  experimental: {
-    runtime: 'experimental-edge',
-  },
-  distDir: '.next',
   images: {
     remotePatterns: [
       {

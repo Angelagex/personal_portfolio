@@ -3,7 +3,6 @@ import '@/styles/globals.css'
 import '@/styles/theme-toggle.scss'
 import { Raleway, Rampart_One } from 'next/font/google'
 import { ThemeProvider } from '@/components/ui/theme-provider'
-import Head from 'next/head'
 
 const raleway = Raleway({ subsets: ['latin'], weight: ['400', '900'], variable: '--font-raleway' })
 const rampart_one = Rampart_One({ subsets: ['latin'], weight: '400', variable: '--font-rampart-one' })
@@ -19,7 +18,6 @@ export const metadata: Metadata = {
   },
 
 }
-export const runtime = "edge";
 
 export default function RootLayout({
   children,
