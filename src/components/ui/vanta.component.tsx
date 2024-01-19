@@ -38,6 +38,7 @@ export default function VantaBackground({ theme }: { theme: string }) {
     return () => {
       if (vantaEffect) vantaEffect.destroy()
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
   return (
