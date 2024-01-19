@@ -14,7 +14,9 @@ const nextConfig = {
         hostname: "openweathermap.org",
         pathname: "**"
       }
-    ]
+    ],
+    formats: ['image/webp', 'image/png', 'image/gif', 'image/jpg'],
+
   }
 }
 
