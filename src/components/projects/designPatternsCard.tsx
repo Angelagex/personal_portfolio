@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
-import designPatterns from "/designPatterns.png"
+//import designPatterns from "/designPatterns.png"
 
 function DesignPatternsCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {
     const [showItems, setShowItems] = useState(false);
@@ -27,7 +27,7 @@ function DesignPatternsCard({title, content, theme}: {title: string, content: st
                     <p className="text-sm pl-2">Angelagex/designPatterns</p>
                 </a>
             </footer>
-            <Image src={designPatterns} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image src={"designPatterns.gif"} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
         </article>
     );
 }
