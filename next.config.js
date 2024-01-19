@@ -5,7 +5,7 @@ const nextConfig = {
   experimental: {
     runtime: 'experimental-edge',
   },
-  distDir: 'build',
+  distDir: '.next',
   images: {
     remotePatterns: [
       {
