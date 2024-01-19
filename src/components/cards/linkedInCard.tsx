@@ -1,6 +1,6 @@
 import Image from "next/image";
-import linkedIn from "linkedIn.svg";
-import openButton from "openButton.svg";
+import linkedIn from "/linkedIn.svg";
+import openButton from "/openButton.svg";
 
 export default function LinkedInCard({ theme }: { theme: string }) {
     return (

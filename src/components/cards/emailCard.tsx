@@ -1,6 +1,6 @@
 import Image from "next/image";
-import mail from "mail.svg";
-import openButton from "openButton.svg";
+import mail from "/mail.svg";
+import openButton from "/openButton.svg";
 
 export default function EmailCard({ theme }: { theme: string }) {
     return (

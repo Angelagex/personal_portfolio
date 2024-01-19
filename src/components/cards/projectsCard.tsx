@@ -1,7 +1,7 @@
 'use client'
 
-import openButton from "openButton.svg";
-import projects from "projects.gif";
+import openButton from "/openButton.svg";
+import projects from "/projects.gif";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";

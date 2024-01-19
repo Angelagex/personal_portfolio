@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import scripting from "scripting.gif";
+import scripting from "/scripting.gif";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
-import gitIconRounded from "gitIconRounded.gif";
+import gitIconRounded from "/gitIconRounded.gif";
 
 
 function BashCard({ title, content, theme }: { title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string }) {

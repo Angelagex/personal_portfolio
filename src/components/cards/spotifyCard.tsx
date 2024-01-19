@@ -1,6 +1,6 @@
-import openButton from "openButton.svg";
-import spotify from "spotify.gif";
-import spotifyMood from "spotifyMood.gif";
+import openButton from "/openButton.svg";
+import spotify from "/spotify.gif";
+import spotifyMood from "/spotifyMood.gif";
 import { getSpotifyInfo } from "@/lib/data";
 import Image from "next/image";
 import AudioPlayer from "../ui/audioPlayer";

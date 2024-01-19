@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hdv from "hdv.gif";
+import hdv from "/hdv.gif";
 import { useTranslations } from "next-intl";
 export default async function HdvCard({ theme }: { theme: string }) {
     const t = useTranslations('Hdv');

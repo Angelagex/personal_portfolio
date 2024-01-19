@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import portfolio from "portfolio.png";
+import portfolio from "/portfolio.png";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
-import gitIconRounded from "gitIconRounded.gif";
+import gitIconRounded from "/gitIconRounded.gif";
 
 
 function PortfolioCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FaHandSparkles } from 'react-icons/fa';
-import me from "me.png";
+import me from "/me.png";
 
 
 export default function ProfileCard({ theme }: { theme: string }) {
