@@ -1,7 +1,7 @@
 import { getSpotifyInfo } from "@/lib/data";
 import Image from "next/image";
 import AudioPlayer from "../ui/audioPlayer"
-import spotifyIcon from "spotifyIcon.gif"
+import spotifyIcon from "/spotifyIcon.gif"
 
 export default async function SpotifyCard({ theme, title }: { theme: string, title: string }) {
   const data = await getSpotifyInfo()
