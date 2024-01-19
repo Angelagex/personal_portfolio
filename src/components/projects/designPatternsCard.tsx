@@ -1,10 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import designPatterns from "/designPatterns.gif";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
-import gitIconRounded from "/gitIconRounded.gif";
-
 
 function DesignPatternsCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {
     const [showItems, setShowItems] = useState(false);
@@ -25,11 +22,11 @@ function DesignPatternsCard({title, content, theme}: {title: string, content: st
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
                 <a href="https://github.com/Angelagex/designPatterns" className="m-auto flex items-center justify-center interactable z-20">
-                    <Image src={gitIconRounded} alt="gitIcon" className="w-8" />
+                    <Image src={"gitIconRounded.gif"} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">Angelagex/designPatterns</p>
                 </a>
             </footer>
-            <Image src={designPatterns} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image src={"designPatterns.gif"} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
         </article>
     );
 }

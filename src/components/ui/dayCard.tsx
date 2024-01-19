@@ -1,4 +1,3 @@
-import day2 from "/day2.gif";
 import Image from "next/image";
 
 export default function DayCard({ data: { description, icon, temp } }: {
@@ -26,7 +25,7 @@ export default function DayCard({ data: { description, icon, temp } }: {
             </div>
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
             <div className="sun"></div>
-                <Image src={day2} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" />
+                <Image src={"day2.gif"} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" />
             </div>
         </div>
     );

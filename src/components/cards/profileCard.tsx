@@ -1,8 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FaHandSparkles } from 'react-icons/fa';
-import me from "/me.png";
-
 
 export default function ProfileCard({ theme }: { theme: string }) {
     const t = useTranslations('Profile');
@@ -18,7 +16,7 @@ export default function ProfileCard({ theme }: { theme: string }) {
                 <p className="text-xs sm:text-sm md:text-base lg:text-xl md:pb-2 xl:text-2xl">{t('footer')}</p>
             </div>
             <div className="col-span-1 xl:col-span-2">
-                <Image src={me} alt="profileCartoonImage" className="absolute bottom-0 right-0 hidden md:block md:w-72 lg:w-[22rem] xl:w-[28rem] interactable scale-x-[-1] drop-shadow-xl" />
+                <Image src={"me.png"} alt="profileCartoonImage" className="absolute bottom-0 right-0 hidden md:block md:w-72 lg:w-[22rem] xl:w-[28rem] interactable scale-x-[-1] drop-shadow-xl" />
             </div>
         </article>
     );

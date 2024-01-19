@@ -1,7 +1,5 @@
 'use client'
 
-import openButton from "/openButton.svg";
-import projects from "/projects.gif";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -25,10 +23,10 @@ export default function ProjectsCard({ theme, content, title }: {
                 </p>
             </div>
             <Link href={`${pathname}/projects?${params.toString()}`}>
-                <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
+                <Image src={"openButton.svg"} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </Link>
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
-                <Image src={projects} className={`w-full h-full object-cover ${theme == "dark" ? "opacity-40" : "opacity-60"}`} alt="" loading="lazy" />
+                <Image src={"projects.gif"} className={`w-full h-full object-cover ${theme == "dark" ? "opacity-40" : "opacity-60"}`} alt="" loading="lazy" />
             </div>
         </div>
     );

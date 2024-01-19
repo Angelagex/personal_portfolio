@@ -1,7 +1,4 @@
 import Image from "next/image";
-import discord_no_bg from "/discord_no_bg.gif";
-import openButton from "/openButton.svg";
-import discord_pp from "/discord_pp.png";
 import { getDiscordStatus } from "@/lib/data";
 import { BsRecordCircleFill, } from "react-icons/bs";
 import { FaMinusCircle } from "react-icons/fa";
@@ -25,7 +22,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
             <div className="w-full h-full flex items-center justify-center interactable z-20 -ml-2 sm:-ml-4">
                 <div className="flex items-end">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 xl:w-14 xl:h-14 rounded-full overflow-hidden border-2 border-[#222528]">
-                        <Image src={discord_pp} alt="discord_pp" className="-mt-4 sm:-mt-6 xl:-mt-8" />
+                        <Image src={"discord_pp.png"} alt="discord_pp" className="-mt-4 sm:-mt-6 xl:-mt-8" />
                     </div>
                     {icon}
                 </div>
@@ -35,10 +32,10 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 </a>
             </div>
             <a href="https://discord.com/users/448913483833147403" target="_blank" rel="noopener noreferrer">
-                <Image src={openButton} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
+                <Image src={"openButton.svg"} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </a>
             <div className="w-full h-full absolute">
-                <Image src={discord_no_bg} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
+                <Image src={"discord_no_bg.gif"} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
             </div>
         </div>
     );
