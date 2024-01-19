@@ -4,6 +4,8 @@ import { BsRecordCircleFill, } from "react-icons/bs";
 import { FaMinusCircle } from "react-icons/fa";
 import { RiMoonFill } from "react-icons/ri";
 import { WiMoonAltNew } from "react-icons/wi";
+import discord_pp from "@/../public/discord_pp.png"
+
 
 
 export default async function DiscordCard({ theme }: { theme: string }) {
@@ -22,7 +24,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
             <div className="w-full h-full flex items-center justify-center interactable z-20 -ml-2 sm:-ml-4">
                 <div className="flex items-end">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 xl:w-14 xl:h-14 rounded-full overflow-hidden border-2 border-[#222528]">
-                        <Image src={"discord_pp.png"} alt="discord_pp" className="-mt-4 sm:-mt-6 xl:-mt-8" />
+                        <Image src={discord_pp} alt="discord_pp" className="-mt-4 sm:-mt-6 xl:-mt-8" />
                     </div>
                     {icon}
                 </div>
