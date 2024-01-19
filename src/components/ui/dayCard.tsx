@@ -24,8 +24,9 @@ export default function DayCard({ data: { description, icon, temp } }: {
                 </p>
             </div>
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
-            <div className="sun"></div>
-                <Image src={"/day2.gif"} width={20} height={20} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" />
+                <div className="sun"></div>
+                <Image src={"/day2.gif"} width={498}
+                    height={280} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" />
             </div>
         </div>
     );

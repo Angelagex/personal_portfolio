@@ -26,7 +26,8 @@ export default function ProjectsCard({ theme, content, title }: {
                 <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </Link>
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
-                <Image src={"/projects.gif"}  width={20} height={20} className={`w-full h-full object-cover ${theme == "dark" ? "opacity-40" : "opacity-60"}`} alt="" loading="lazy" />
+                <Image src={"/projects.gif"} width={498}
+                    height={280} className={`w-full h-full object-cover ${theme == "dark" ? "opacity-40" : "opacity-60"}`} alt="" loading="lazy" />
             </div>
         </div>
     );
