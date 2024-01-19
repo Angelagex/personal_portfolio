@@ -34,10 +34,10 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 </a>
             </div>
             <a href="https://discord.com/users/448913483833147403" target="_blank" rel="noopener noreferrer">
-                <Image src={"openButton.svg"} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
+                <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </a>
             <div className="w-full h-full absolute">
-                <Image src={"discord_no_bg.gif"} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
+                <Image src={"/discord_no_bg.gif"} width={20} height={20} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
             </div>
         </div>
     );

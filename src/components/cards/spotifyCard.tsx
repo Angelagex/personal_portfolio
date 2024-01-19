@@ -13,7 +13,7 @@ export default async function SpotifyCard({ theme, title }: { theme: string, tit
         rel="noopener noreferrer"
         aria-label="Spotify"
       >
-        <Image src={spotifyIcon} alt="spotifyIcon2" className="-z-1 absolute w-24 top-4 -left-4 md:-left-4 lg:top-10 lg:left-0 xl:top-8 xl:-left-4 lg:w-30 xl:w-36 interactable" />
+        <Image src={spotifyIcon}  width={20} height={20} alt="spotifyIcon2" className="-z-1 absolute w-24 top-4 -left-4 md:-left-4 lg:top-10 lg:left-0 xl:top-8 xl:-left-4 lg:w-30 xl:w-36 interactable" />
       </a>
       <p className="text-[#ffffff] font-bold text-xs sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
         {title}
@@ -35,7 +35,7 @@ export default async function SpotifyCard({ theme, title }: { theme: string, tit
         rel="noopener noreferrer"
         aria-label="Spotify"
       >
-        <Image src={"spotifyMood.gif"} alt="spotifyIcon" className="interactable z-20 absolute bottom-0 right-0 w-28 xl:w-36" />
+        <Image src={"/spotifyMood.gif"} width={20} height={20} alt="spotifyIcon" className="interactable z-20 absolute bottom-0 right-0 w-28 xl:w-36" />
       </a>
 
       <Image

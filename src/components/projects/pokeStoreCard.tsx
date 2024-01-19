@@ -21,15 +21,15 @@ function PokeStoreCard({title, content, theme}: {title: string, content: string 
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
                 <a href="https://github.com/Angelagex/pokeStore" target="_blank" className="m-auto flex items-center justify-center interactable z-20">
-                    <Image src={"gitIconRounded.gif"} alt="gitIcon" className="w-8" />
+                    <Image src={"/gitIconRounded.gif"} width={20} height={20} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">Angelagex/pokeStore</p>
                 </a>
                 <a href="https://angelagex.github.io/pokeStore/" target="_blank" className="m-auto flex items-center justify-center interactable mt-3 z-20">
-                    <Image src={"pokeballLogo.png"} alt="gitIcon" className="w-8" />
+                    <Image src={"/pokeballLogo.png"} width={20} height={20} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">PokeStore</p>
                 </a>
             </footer>
-            <Image src={"pokeStore2.png"} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image src={"/pokeStore2.png"} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
         </article>
     );
 }
