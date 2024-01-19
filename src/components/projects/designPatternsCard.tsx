@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
-import designPatterns from "designPatterns.gif"
+import designPatterns from "@/../public/designPatterns.gif"
 
 function DesignPatternsCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {
     const [showItems, setShowItems] = useState(false);
