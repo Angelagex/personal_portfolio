@@ -30,7 +30,7 @@ export default function Home({ searchParams }: SearchParams) {
   const tSpotify = useTranslations('Spotify');
   return <main>
     <VantaBackground key={theme} theme={theme} />
-      <Pointer />
+    <Pointer />
     <div className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20 relative z-20 sm:px-0 p-2">
       <ProfileCard theme={theme} />
       <LanguageCard theme={theme} />

@@ -32,7 +32,7 @@ export default async function MlbbCard({ theme }: { theme: string }) {
                 <Image src={"/mllogonobg.png"} alt="mlLogo"  width={500} height={500} className="-z-10 absolute w-20 sm:w-24 lg:w-32 xl:w-40 top-4 left-2 sm:top-6 sm:left-4 xl:top-6 xl:left-6 drop-shadow" />
             </a>
             <Image src={"/beatrix.png"} alt="beatrixImage"   width={500} height={500} className="-z-10 hidden md:absolute md:block sm:w-[150px] md:w-[200px] xl:w-[300px] bottom-0 -left-2 beatrix" />
-            <Image src={"/mlbgNoText2.jpg"} width={500} height={500} className={`fixed h-full top-0 left-0 object-center object-cover -z-[1000] rounded-3xl ${theme == "dark" ? "opacity-50" : "opacity-70"}`} alt="mlBackground" loading="lazy" />
+            <Image src={"/mlbgNoText2.jpg"} width={500} height={500} className={`absolute h-full top-0 left-0 object-center object-cover -z-[1000] rounded-3xl ${theme == "dark" ? "opacity-50" : "opacity-70"}`} alt="mlBackground" loading="lazy" />
         </div>
     );
 }

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${raleway.className} ${rampart_one.variable}`}>
-        <ThemeProvider attribute='class' defaultTheme='system'>
+        <ThemeProvider attribute='class' defaultTheme='dark'>
           {children}
         </ThemeProvider>
       </body>

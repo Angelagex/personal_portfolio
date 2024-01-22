@@ -9,6 +9,7 @@ export default function VantaBackground({ theme }: { theme: string }) {
   // Here comes Vanta React Hook code
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const vantaRef = useRef(null);
+  const [sBrowser, setSBrowser] = useState<String>()
 
   useEffect(() => {
     let color = theme == 'light' ? 0xf06dc1 : 0xff3f81
@@ -38,11 +39,28 @@ export default function VantaBackground({ theme }: { theme: string }) {
     return () => {
       if (vantaEffect) vantaEffect.destroy()
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
+  useEffect(() => {
+    if (typeof navigator !== "undefined") {
+      const sUsrAg = navigator.userAgent;      
+      if (sUsrAg.indexOf("Chrome") > -1) {
+        setSBrowser("Google Chrome");
+        
+      } else if (sUsrAg.indexOf("Safari") > -1) {        
+        setSBrowser("Apple Safari");
+      } else if (sUsrAg.indexOf("Opera") > -1) {
+        setSBrowser("Opera");
+      } else if (sUsrAg.indexOf("Firefox") > -1) {
+        setSBrowser("Mozilla Firefox");
+      } else if (sUsrAg.indexOf("MSIE") > -1) {
+        setSBrowser("Microsoft Internet Explorer");
+      }
+    }
+  }, [sBrowser])
+
   return (
-    <div className={`fixed h-full w-full top-0 left-0 object-center object-cover -z-[100]`} ref={vantaRef}>
-    </div>
+    <div className={`${sBrowser == "Apple Safari" ? "hidden" : ""} fixed h-full w-full top-0 left-0 object-center object-cover -z-[100] vanta-bg`} ref={vantaRef}></div>
   )
 }
