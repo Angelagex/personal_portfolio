@@ -14,7 +14,7 @@
 	}
 
 	.grain::before {
-		--grain: url("../../public/before5.gif");
+		--grain: url("../../public/before5.webp");
 		background: linear-gradient(-45deg, #000000e1, #474747e7),
 			var(--grain);
 		content: '';

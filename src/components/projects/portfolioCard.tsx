@@ -21,11 +21,11 @@ function PortfolioCard({title, content, theme}: {title: string, content: string 
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
                 <a href="https://github.com/Angelagex/personal_portfolio" className="m-auto flex items-center justify-center interactable z-20">
-                    <Image src={"/gitIconRounded.gif"} width={20} height={20} alt="gitIcon" className="w-8" />
+                    <Image src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="w-8" />
                     <p className="text-sm pl-2">Angelagex/personal_portfolio</p>
                 </a>
             </footer>
-            <Image src={"/portfolio.png"} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image src={"/portfolio.webp"} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
         </article>
     );
 }

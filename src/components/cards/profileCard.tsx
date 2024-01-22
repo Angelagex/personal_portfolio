@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FaHandSparkles } from 'react-icons/fa';
-import me from "@/../public/me.png"
+import me from "@/../public/me.webp"
 
 export default function ProfileCard({ theme }: { theme: string }) {
     const t = useTranslations('Profile');
     return (
-        <article className={`${theme == "dark" ? "purple_mix_card" : "purple_mix_card_light grain"} relative z-70 col-span-3 h-80 md:h-auto md:aspect-auto md:row-span-2 rounded-3xl overflow-hidden grid grid-cols-3 xl:grid-cols-5`}>
+        <article className={`${theme == "dark" ? "purple_mix_card" : "purple_mix_card_light grain"} relative z-70 col-span-3 h-72 md:h-auto md:aspect-auto md:row-span-2 rounded-3xl overflow-hidden grid grid-cols-3 xl:grid-cols-5`}>
             <div className="col-span-3 md:col-span-2 xl:col-span-3 h-full  p-8 xl:p-12 pt-14 sm:pt-16 flex flex-col justify-start md:justify-end md:pb-12">
                 <h1 className="interactable title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-5 font-raleway z-20">
                     {t('title', { name: "Angel Agelvis" })}

@@ -9,10 +9,10 @@ export default async function HdvCard({ theme }: { theme: string }) {
         rel="noopener noreferrer" 
         download="Angel Agelvis.pdf" 
         className={`${theme == "dark" ? "white_card" : "white_card_light grain" } col-span-1 relative p-2 rounded-3xl flex justify-center aspect-square`}>
-                <h2 className="text-white text-center font-bold text-xs sm:text-base lg:text-base xl:text-xl md:text-sm p-4 xl:p-8 interactable z-20">
+                <h2 className="text-white text-center font-bold text-[0.65rem] leading-3 sm:text-base lg:text-base xl:text-xl md:text-sm p-2 sm:p-4 xl:p-8 interactable z-20">
                     {t("title")}
                 </h2>
-                <Image src={"/hdv.gif"} width={500} height={500} className="absolute top-0 left-0 object-center object-cover -z-[1000] rounded-3xl opacity-60" alt="" loading="lazy" />
+                <Image src={"/hdv.webp"} width={500} height={500} className="absolute top-0 left-0 object-center object-cover -z-[1000] rounded-3xl opacity-60" alt="" loading="lazy" />
         </a>
     );
 }

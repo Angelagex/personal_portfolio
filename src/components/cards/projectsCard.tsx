@@ -15,10 +15,10 @@ export default function ProjectsCard({ theme, content, title }: {
     return (
         <div className={`${theme == "dark" ? "white_card" : "white_card_light grain"} relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden`}>
             <div className="w-full h-full absolute top-0 left-0 p-6 sm:p-8 z-10 xl:p-12">
-                <a href={`${pathname}/projects?${params.toString()}`} className="font-bold text-base sm:text-md md:text-l lg:text-3xl xl:text-4xl z-20 interactable">
+                <a href={`${pathname}/projects?${params.toString()}`} className="font-bold text-xs sm:text-md md:text-l lg:text-3xl xl:text-4xl z-20 interactable">
                     {title}
                 </a>
-                <p className="text-xs sm:text-sm lg:text-base xl:text-lg md:w-4/5 lg:w-5/6 lg:mt-4">
+                <p className="text-[0.65rem] leading-3 sm:text-sm lg:text-base xl:text-lg md:w-4/5 lg:w-5/6 lg:mt-4">
                     {content}
                 </p>
             </div>
@@ -26,7 +26,7 @@ export default function ProjectsCard({ theme, content, title }: {
                 <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </Link>
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
-                <Image src={"/projects.gif"} width={498}
+                <Image src={"/projects.webp"} width={498}
                     height={280} className={`w-full h-full object-cover ${theme == "dark" ? "opacity-40" : "opacity-60"}`} alt="" loading="lazy" />
             </div>
         </div>

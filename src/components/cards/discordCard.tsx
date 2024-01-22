@@ -4,7 +4,7 @@ import { BsRecordCircleFill, } from "react-icons/bs";
 import { FaMinusCircle } from "react-icons/fa";
 import { RiMoonFill } from "react-icons/ri";
 import { WiMoonAltNew } from "react-icons/wi";
-import discord_pp from "@/../public/discord_pp.png"
+import discord_pp from "@/../public/discord_pp.webp"
 
 
 
@@ -37,7 +37,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-6 z-30" />
             </a>
             <div className="w-full h-full absolute">
-                <Image src={"/discord_no_bg.gif"} width={500} height={500} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
+                <Image src={"/discord_no_bg.webp"} width={500} height={500} className="absolute bottom-2 right-2 w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
             </div>
         </div>
     );
