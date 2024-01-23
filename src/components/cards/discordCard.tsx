@@ -37,7 +37,7 @@ export default async function DiscordCard({ theme }: { theme: string }) {
                 <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-4 sm:w-6 z-30" />
             </a>
             <div className="w-full h-full absolute">
-                <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="src={"/discord_no_bg.webp"} width={500} height={500} className="absolute bottom-2 right-2 w-8 xs:w-10 sm:w-14 opacity-40" alt="" loading="lazy" />
+                <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="src={"/discord_no_bg.webp"} width={500} height={500} className="absolute bottom-2 right-2 w-8 xs:w-10 sm:w-14 opacity-40" alt="" loading="lazy" unoptimized={true}/>
             </div>
         </div>
     );

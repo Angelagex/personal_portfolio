@@ -26,7 +26,7 @@ export default function NightCard({ data: { description, icon, temp } }: {
             <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
                 <div className="moon"></div>
                 <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="src={"/starfall.webp"} width={498}
-                    height={280} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" />
+                    height={280} className="w-full h-full object-cover opacity-60" alt="" loading="lazy" unoptimized={true}/>
             </div>
         </div>
     );

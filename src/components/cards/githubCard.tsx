@@ -16,15 +16,15 @@ export default function GithubCard({ theme }: { theme: string }) {
                     src={"/github.webp"}
                     width={498}
                     height={280}
-                    decoding="async"
                     alt=""
                     loading="lazy"
+                    unoptimized={true}
                 />
             </div>
             <a href="http://github.com/Angelagex" target="_blank" rel="noopener noreferrer">
                 <Image src={"/openButton.svg"} width={20} height={20} alt="openButton" className="absolute top-4 right-4 w-4 sm:w-6" />
             </a>
-            <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="absolute bottom-4 right-4 w-6 xxs:w-8 sm:w-10 xl:w-14" />
+            <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="absolute bottom-4 right-4 w-6 xxs:w-8 sm:w-10 xl:w-14" unoptimized={true}/>
         </div>
     );
 }

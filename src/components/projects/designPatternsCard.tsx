@@ -28,7 +28,7 @@ function DesignPatternsCard({ title, content, theme }: { title: string, content:
                     <p className="text-[0.65rem] leading-3 sm:text-xs md:text-sm pl-2 sm:pl-0">designPatterns</p>
                 </a>
             </footer>
-            <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={designPatterns} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={designPatterns} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" unoptimized={true}/>
         </article>
     );
 }
