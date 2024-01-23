@@ -2,7 +2,7 @@ import DarkModeCard from '@/components/cards/darkModeCard';
 import DiscordCard from '@/components/cards/discordCard';
 import EmailCard from '@/components/cards/emailCard';
 import ExperienceCard from '@/components/cards/experienceCard';
-import GitCard from '@/components/cards/gitCard';
+import GithubCard from '@/components/cards/githubCard';
 import HdvCard from '@/components/cards/hdvCard';
 import IconsCard from '@/components/cards/iconsCard';
 import LanguageCard from '@/components/cards/languageCard'
@@ -38,7 +38,7 @@ export default function Home({ searchParams }: SearchParams) {
       <LinkedInCard theme={theme} />
       <EmailCard theme={theme} />
       <ProjectsCard theme={theme} title={tProjects("title")} content={tProjects("content")} />
-      <GitCard theme={theme} />
+      <GithubCard theme={theme} />
       <ExperienceCard theme={theme} />
       <MlbbCard theme={theme} />
       <SpotifyCard theme={theme} title={tSpotify("title")} />

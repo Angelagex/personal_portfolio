@@ -12,7 +12,7 @@ export default async function HdvCard({ theme }: { theme: string }) {
                 <h2 className="text-white text-center font-bold text-[0.65rem] leading-3 sm:text-base lg:text-base xl:text-xl md:text-sm p-2 sm:p-4 xl:p-8 interactable z-20">
                     {t("title")}
                 </h2>
-                <Image src={"/hdv.webp"} width={500} height={500} className="absolute top-0 left-0 object-center object-cover -z-[1000] rounded-3xl opacity-60" alt="" loading="lazy" />
+                <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="src={"/hdv.webp"} width={500} height={500} className="absolute top-0 left-0 object-center object-cover -z-[1000] rounded-3xl opacity-60" alt="" loading="lazy" />
         </a>
     );
 }

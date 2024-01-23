@@ -14,7 +14,7 @@
 	}
 
 	.grain::before {
-		--grain: url("../../public/before5.webp");
+		--grain: url("https://i.ibb.co/Kb9s4ZW/before5.webp");
 		background: linear-gradient(-45deg, #000000e1, #474747e7),
 			var(--grain);
 		content: '';
@@ -273,28 +273,7 @@
 
 }
 
-@layer weather {
-	.sun {
-		width: 80px;
-		height: 80px;
-		background: #fcdd2e;
-		border-radius: 50%;
-		animation: shine 16s ease-in-out infinite;
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		z-index: 100;
-		box-shadow: 0 0 20px #ffdd50
-	}
 
-	@keyframes shine {
-		50% {
-			box-shadow: 2px 2px 20px #ffde5c,
-				2px 2px 80px #ffdd50,
-				2px 2px 350px rgb(255, 252, 80);
-		}
-	}
-}
 
 @layer weather {
 	.moon {
@@ -316,6 +295,35 @@
 				0 0 80px rgb(245, 231, 178)
 		}
 	}
+
+	.sun {
+		width: 80px;
+		height: 80px;
+		background: #fcdd2e;
+		border-radius: 50%;
+		animation: sunshine 16s ease-in-out infinite;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 100;
+		box-shadow: 0 0 20px #ffdd50
+	}
+
+	@keyframes sunshine {
+		50% {
+			box-shadow: 2px 2px 20px #ffde5c,
+				2px 2px 80px #ffdd50,
+				2px 2px 350px rgb(255, 252, 80);
+		}
+	}
+
+	@media (max-width: 440px) {
+		.sun, .moon {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	
 }
 
 @layer mlbb {

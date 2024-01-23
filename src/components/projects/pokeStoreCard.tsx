@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { JSXElementConstructor, ReactElement, ReactNodeArray, useState } from "react";
 
-function PokeStoreCard({title, content, theme}: {title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string}) {
+function PokeStoreCard({ title, content, theme }: { title: string, content: string | ReactElement<any, string | JSXElementConstructor<any>> | ReactNodeArray, theme: string }) {
     const [showItems, setShowItems] = useState(false);
-    const opacityHandler = theme == 'dark' ? {out: "opacity-75", in:"opacity-35"} : {out:"opacity-85", in: "opacity-45"}
+    const opacityHandler = theme == 'dark' ? { out: "opacity-75", in: "opacity-35" } : { out: "opacity-85", in: "opacity-45" }
 
     return (
         <article
@@ -16,20 +16,21 @@ function PokeStoreCard({title, content, theme}: {title: string, content: string 
             <header className={`${showItems ? "hidden" : "customUnderline"} z-20 font-bold text-center text-xl md:text-3xl m-auto`}>
                 {title}
             </header>
-            <main className={`${!showItems ? "hidden" : ""} text-center z-20 font-bold text-sm md:text-base lg:text-lg`}>
+            <main className={`${!showItems ? "hidden" : ""} text-center z-20 font-bold text-[0.65rem] leading-3 xs:text-sm md:text-base lg:text-lg`}>
                 {content}
             </main>
-            <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-20`}>
+            <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-4 xs:mt-10 sm:mt-20`}>
                 <a href="https://github.com/Angelagex/pokeStore" target="_blank" className="m-auto flex items-center justify-center interactable z-20">
-                    <Image src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="w-8" />
-                    <p className="text-sm pl-2">Angelagex/pokeStore</p>
+                    <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="w-4 xs:w-8" />
+                    <p className="hidden sm:inline sm:text-xs md:text-sm pl-[0.25rem] xs:pl-2">Angelagex/</p>
+                    <p className="text-[0.65rem] leading-3 sm:text-xs md:text-sm pl-2 sm:pl-0">pokeStore</p>
                 </a>
                 <a href="https://angelagex.github.io/pokeStore/" target="_blank" className="m-auto flex items-center justify-center interactable mt-3 z-20">
-                    <Image src={"/pokeballLogo.webp"} width={20} height={20} alt="gitIcon" className="w-8" />
-                    <p className="text-sm pl-2">PokeStore</p>
+                    <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/pokeballLogo.webp"} width={20} height={20} alt="gitIcon" className="w-4 xs:w-8" />
+                    <p className="text-[0.65rem] leading-3 sm:text-xs md:text-sm pl-[0.25rem] xs:pl-2">PokeStore</p>
                 </a>
             </footer>
-            <Image src={"/pokeStore2.webp"} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
+            <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/pokeStore2.webp"} width={500} height={500} className={`w-full h-full absolute -ml-2 rounded-3xl object-cover ${!showItems ? opacityHandler.out : opacityHandler.in}`} alt="" loading="lazy" />
         </article>
     );
 }

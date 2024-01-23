@@ -14,6 +14,15 @@ const config: Config = {
         "raleway": "var(--font-raleway)",
         "rampart-one": "var(--font-rampart-one)",
       }
+    },
+    screens: {
+      xs: '480px',
+      xxs: '380px',
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px"
     }
   },
   plugins: [],
