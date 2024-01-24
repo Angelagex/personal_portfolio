@@ -61,6 +61,6 @@ export default function VantaBackground({ theme }: { theme: string }) {
   }, [sBrowser])
 
   return (
-    <div className={`${sBrowser == "Apple Safari" ? "hidden" : ""} fixed h-[90%] xxs:h-full w-full top-0 left-0 object-center object-cover -z-[100] vanta-bg`} ref={vantaRef}></div>
+    <div className={`${sBrowser == "Apple Safari" ? "hidden" : ""} fixed h-full w-full top-0 left-0 object-center object-cover -z-[100] vanta-bg`} ref={vantaRef}></div>
   )
 }
