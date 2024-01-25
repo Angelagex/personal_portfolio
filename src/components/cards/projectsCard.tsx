@@ -13,11 +13,11 @@ export default function ProjectsCard({ theme, content, title }: {
     const params = new URLSearchParams(searchParams);
 
     return (
-        <div className={`${theme == "dark" ? "white_card" : "white_card_light grain"} relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden`}>
+        <a href={`${pathname}/projects?${params.toString()}`} className={`${theme == "dark" ? "white_card" : "white_card_light grain"} relative rounded-3xl col-span-2 md:aspect-auto overflow-hidden`}>
             <div className="w-full h-full absolute top-0 left-0 p-4 sm:p-8 z-10 xl:p-12">
-                <a href={`${pathname}/projects?${params.toString()}`} className="font-bold text-xs sm:text-md md:text-l lg:text-3xl xl:text-4xl z-20 interactable">
+                <div className="font-bold text-xs sm:text-md md:text-l lg:text-3xl xl:text-4xl z-20 interactable">
                     {title}
-                </a>
+                </div>
                 <p className="text-[0.65rem] leading-3 sm:text-sm lg:text-base xl:text-lg md:w-4/5 lg:w-5/6 lg:mt-4">
                     {content}
                 </p>
@@ -38,6 +38,6 @@ export default function ProjectsCard({ theme, content, title }: {
                 unoptimized={true}
                 />
             </div>
-        </div>
+        </a>
     );
 }
