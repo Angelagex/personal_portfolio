@@ -21,7 +21,7 @@ function PokeStoreCard({ title, content, theme }: { title: string, content: stri
             </main>
             <footer className={`${!showItems ? "hidden" : ""} z-20 flex flex-col mt-4 xs:mt-10 sm:mt-20`}>
                 <a href="https://github.com/Angelagex/pokeStore" target="_blank" className="m-auto flex items-center justify-center interactable z-20">
-                    <Image placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="w-4 xs:w-8" />
+                    <Image src={"/gitIconRounded.webp"} width={20} height={20} alt="gitIcon" className="w-4 xs:w-8" />
                     <p className="hidden sm:inline sm:text-xs md:text-sm pl-[0.25rem] xs:pl-2">Angelagex/</p>
                     <p className="text-[0.65rem] leading-3 sm:text-xs md:text-sm pl-2 sm:pl-0">pokeStore</p>
                 </a>

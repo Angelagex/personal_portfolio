@@ -47,7 +47,7 @@
 	.purple_mix_card {
 		border-radius: 1.25rem;
 		border: 1px solid #FFF;
-		background: linear-gradient(229deg, rgba(181, 136, 255, 0.20) 12.25%, rgba(136, 255, 234, 0.05) 92.63%, rgba(136, 255, 234, 0.05) 92.63%);
+		background: linear-gradient(229deg, rgba(0, 140, 255, 0.158) 12.25%, rgba(106, 70, 165, 0.2) 92.63%);
 		box-shadow: 0px 4px 15px 0px rgba(153, 153, 153, 0.15);
 		backdrop-filter: blur(7.5px);
 	}
@@ -55,7 +55,7 @@
 	.purple_mix_card_light {
 		border-radius: 1.25rem;
 		border: 1px solid #FFF;
-		background: linear-gradient(49deg, rgba(15, 6, 66, 0.699) 12.25%, rgba(84, 0, 87, 0.747) 89.76%);
+		background: linear-gradient(49deg, rgba(84, 0, 87, 0.644) 12.25%, rgba(7, 42, 82, 0.822) 89.76%);
 		box-shadow: 0px 4px 15px 0px rgba(24, 24, 24, 0.651);
 		backdrop-filter: blur(7.5px);
 	}
